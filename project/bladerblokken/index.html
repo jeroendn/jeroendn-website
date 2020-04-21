@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>Bladerblokken</title>
+    <link href="images/SBGLogo.png" rel="icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.CSS">
+  	<link href="<!--font here-->" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script>
+	  function toggle() {
+  		var x = document.getElementById ("navigation");
+  		if (x.className === "nav-res") {
+          x.className += " responsive";
+  		} else {
+          x.className = "nav-res";
+  		}
+	  }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="#" onclick="toggle()"><i class="fas fa-bars" id="icon"></i></a>
+      <nav id="navigation" class="nav-res responsive">
+        <a href="index.html"><img src="images/SBGLogo.png" alt="sbg"></a>
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <a href="info-kinderen.html"><li>Info Jongeren</li></a>
+          <a href="info-ouders.html"><li>Info Ouders</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+          <a href="begin-nu.html"><li>Begin Nu!</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content" class="float-left">
+      <h1>Schone stad, volle spaarpot</h1>
+      <p>
+        Ligt jouw stoep ook vol met bladeren? Wil je wat extra geld verdienen? Wil je goed mee helpen voor een betere natuur?
+        Dan hebben wij iets voor jou!
+        Wij vragen iedereen uit ede om alle bladeren te verzamelen, De verzamelde bladeren worden als brandstof gebruikt om jouw douche water lekker warm te maken. Ook is dit goed voor de natuur. Wil je meer weten hierover <a href="info-ouders.html">klik dan hier.</a>
+      </p>
+      <img src="images/bladeren.jpg" alt="bladeren">
+    </div>
+
+    <footer class="footer float-left">
+      <p>SkeerBladGroen©</p>
+    </footer>
+
+  </body>
+
+</html>

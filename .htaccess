@@ -1,0 +1,19 @@
+#DON'T SHOW DIRECTORY LISTINGS
+Options -Indexes
+
+ErrorDocument 400 /jeroendenijs_website/pages/error.php
+ErrorDocument 401 /jeroendenijs_website/pages/error.php
+ErrorDocument 403 /jeroendenijs_website/pages/error.php
+ErrorDocument 404 /jeroendenijs_website/pages/error.php
+ErrorDocument 405 /jeroendenijs_website/pages/error.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^$ pages/home.php
+RewriteRule ^hom$ pages/home.php
+RewriteRule ^projects$ pages/projects.php
+
+DirectoryIndex index.php

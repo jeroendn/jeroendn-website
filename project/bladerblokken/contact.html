@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+    <title>Bladerblokken</title>
+    <link href="images/SBGLogo.png" rel="icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.CSS">
+  	<link href="<!--font here-->" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <script>
+	  function toggle() {
+  		var x = document.getElementById ("navigation");
+  		if (x.className === "nav-res") {
+          x.className += " responsive";
+  		} else {
+          x.className = "nav-res";
+  		}
+	  }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <a href="#" onclick="toggle()"><i class="fas fa-bars" id="icon"></i></a>
+      <nav id="navigation" class="nav-res responsive">
+        <a href="index.html"><img src="images/SBGLogo.png" alt="sbg"></a>
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <a href="info-kinderen.html"><li>Info Jongeren</li></a>
+          <a href="info-ouders.html"><li>Info Ouders</li></a>
+          <a href="contact.html"><li>Contact</li></a>
+          <a href="begin-nu.html"><li>Begin Nu!</li></a>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="content" class="float-left">
+      <h1>Contact gegevens </h1>
+      <p>
+        Contact gegevens voor vragen en opmerkingen.<br><br>
+
+        E-mail Mischa: <a href="">400031348@st.roc.a12.nl</a><br>
+        E-mail Jeroen: <a href="">400031191@st.roc.a12.nl</a><br><br>
+        Tel: <a href="">1234 567 890</a>
+      </p>
+    </div>
+
+    <footer class="footer float-left">
+      <p>SkeerBladGroen©</p>
+    </footer>
+
+  </body>
+
+</html>

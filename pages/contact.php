@@ -1,19 +1,7 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <title>Jeroen - Contact</title>
-    <?php include('../php/head.inc.php') ?>
-    <link rel="stylesheet" type="text/css" href="../css/?.css">
-  </head>
+<?php require_once __DIR__ . '../../php/head.php'; ?>
 
-  <body>
-    <?php include('../php/header.inc.php') ?>
+<main>
+  
+</main>
 
-    <main>
-
-    </main>
-
-    <?php include('../php/footer.inc.php') ?>
-    <?php include('../php/script.inc.php') ?>
-  </body>
-</html>
+<?php require_once __DIR__ . '../../php/footer.php'; ?>

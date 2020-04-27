@@ -13,7 +13,8 @@ RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
 RewriteRule ^$ pages/home.php
-RewriteRule ^hom$ pages/home.php
+RewriteRule ^home$ pages/home.php
 RewriteRule ^projects$ pages/projects.php
+RewriteRule ^contact$ pages/contact.php
 
 DirectoryIndex index.php

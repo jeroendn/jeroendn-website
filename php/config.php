@@ -1,2 +1,2 @@
-<?php 
-$domain = 'jeroendenijs.ga';
+<?php
+$example_var = 'var';

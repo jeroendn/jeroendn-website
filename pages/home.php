@@ -1,7 +1,5 @@
-<?php require_once __DIR__ . '../../php/head.php'; ?>
+<?php require_once __DIR__ . '../../php/includes/head.php'; ?>
 
-<main>
-  <p>Go to <a href="projects">jeroendenijs.ga/projects</a> to see my projects</p>
-</main>
+<p>Ga naar <a href="projects"><?php echo getDomainName(); ?>/projects</a> om mijn projecten te bekijken.</p>
 
-<?php require_once __DIR__ . '../../php/footer.php'; ?>
+<?php require_once __DIR__ . '../../php/includes/footer.php'; ?>

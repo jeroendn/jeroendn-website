@@ -1,7 +1,5 @@
-<?php require_once __DIR__ . '../../php/head.php'; ?>
+<?php require_once __DIR__ . '../../php/includes/head.php'; ?>
 
-<main>
-  These are my projects!
-</main>
+Momenteel nog geen projecten beschikbaar om te bekijken.
 
-<?php require_once __DIR__ . '../../php/footer.php'; ?>
+<?php require_once __DIR__ . '../../php/includes/footer.php'; ?>

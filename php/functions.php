@@ -1,15 +1,15 @@
 <?php
-function get_domain_name() {
+function getDomainName() {
   return $_SERVER['HTTP_HOST'];
 }
 
-function get_page_title() {
+function getPageTitle() {
   $url = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  $current_page_title = basename($url);
+  $currentPageTitle = basename($url);
 
-  if ($current_page_title == get_domain_name()) {
-    $current_page_title = 'home';
+  if ($currentPageTitle == getDomainName()) {
+    $currentPageTitle = 'home';
   }
 
-  return ' - ' . $current_page_title;
+  return $currentPageTitle;
 }

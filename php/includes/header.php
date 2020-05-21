@@ -9,12 +9,5 @@
     <a class="menu-item" href="home"><li>Home</li></a>
     <a class="menu-item" href="projects"><li>Projects</li></a>
     <a class="menu-item" href="contact"><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
-    <a class="menu-item" href=""><li>Contact</li></a>
   </nav>
 </header>

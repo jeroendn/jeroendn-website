@@ -1,0 +1,130 @@
+header {
+  display: flex;
+}
+
+header #menu-btn-element {
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #000;
+  cursor: pointer;
+  height: 500px;
+  margin-left: 0;
+  margin-top: -310px;
+  position: fixed;
+  transform: rotate(70deg);
+  user-select: none;
+  width: 300px;
+  z-index: 4;
+  transition: background-color .5s ease-in-out;
+}
+
+header #menu-btn-element div#menu-btn {
+  transform: rotate(-70deg);
+  position: absolute;
+  top: 305px;
+  left: 165px;
+  display: flex;
+  align-items: center;
+}
+
+header #menu-btn-element div#menu-btn .menu-icon, header #menu-btn-element div#menu-btn .menu-icon:before, header #menu-btn-element div#menu-btn .menu-icon:after {
+  width: 25px;
+  height: 3px;
+  background-color: #000;
+  position: absolute;
+  transition: 2s;
+}
+
+header #menu-btn-element div#menu-btn .menu-icon:before {
+  content: "";
+  top: -10px;
+}
+
+header #menu-btn-element div#menu-btn .menu-icon:after {
+  content: "";
+  bottom: -10px;
+}
+
+header #menu-btn-element div#menu-btn p.menu-text {
+  font-family: 'Varela Round';
+  font-size: 50px;
+  color: #000;
+  margin-bottom: 6px;
+  margin-left: 30px;
+  transition: 2s;
+}
+
+header #menu-btn-element:hover {
+  background-color: #000;
+}
+
+header #menu-btn-element:hover div#menu-btn .menu-icon, header #menu-btn-element:hover div#menu-btn .menu-icon:before, header #menu-btn-element:hover div#menu-btn .menu-icon:after {
+  background-color: #fff;
+}
+
+header #menu-btn-element:hover div#menu-btn p.menu-text {
+  color: #fff;
+}
+
+header #menu-btn-element:active {
+  background-color: #333;
+}
+
+header nav#main-menu {
+  background-color: #000;
+  height: calc(100vh - 160px);
+  left: 0;
+  max-height: calc(100vh - 160px);
+  width: 100vw;
+  max-width: 170px;
+  min-height: calc(100vh - 160px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-top: 160px;
+  position: fixed;
+  transition: 400ms ease-in-out;
+  z-index: 3;
+  direction: rtl;
+  box-shadow: 1px 1px 5px #000;
+}
+
+header nav#main-menu.menu-closed {
+  left: -210px;
+}
+
+header nav#main-menu a.menu-item {
+  text-decoration: none;
+  display: block;
+  margin: 5%;
+}
+
+header nav#main-menu a.menu-item li {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
+  color: #000;
+  display: flex;
+  font-family: 'Varela Round';
+  font-size: 24px;
+  font-weight: bold;
+  height: 80px;
+  justify-content: center;
+  transition: 200ms;
+}
+
+header nav#main-menu a.menu-item:hover li {
+  background-color: #c95f00;
+  color: #fff;
+}
+
+header nav#main-menu::-webkit-scrollbar {
+  width: 5px;
+}
+
+header nav#main-menu::-webkit-scrollbar-track {
+  box-shadow: none;
+}
+
+header nav#main-menu::-webkit-scrollbar-thumb {
+  background: #fff;
+}

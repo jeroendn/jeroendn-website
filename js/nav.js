@@ -1,8 +1,14 @@
-function menu_toggle() {
-  if(document.getElementById("main-menu").classList == "menu-closed") {
-    document.getElementById("main-menu").classList.remove("menu-closed");
+function menuToggle() {
+  if($('#main-menu').hasClass('menu-closed')) {
+    $('#main-menu').removeClass('menu-closed');
   }
   else {
-    document.getElementById("main-menu").classList.add("menu-closed");
+    $('#main-menu').addClass('menu-closed');
   }
 }
+
+$('body').on('click', function(e) {
+  if (!$(e.target).closest('header').length) {
+    $('#main-menu').addClass('menu-closed');
+  }
+});

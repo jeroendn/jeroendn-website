@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <style>
+      html {
+        overflow: hidden;
+      }
+
       body {
         margin: 0;
         height: 100vh;
@@ -32,7 +36,7 @@
         content: '';
         background-color: #000;
         position: absolute;
-        width: 100%;
+        width: 105%;
         z-index: -1;
       }
 
@@ -48,7 +52,7 @@
         height: 100px;
         left: 0;
         top: 100%;
-        transform: rotateZ(3deg) translate(5px, -52px);
+        transform: rotateZ(3deg) translate(-5px, -52px);
         box-shadow: 0px 2px 2px 0px #000;
       }
 

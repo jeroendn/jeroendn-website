@@ -31,7 +31,7 @@ header #menu-btn-element div#menu-btn .menu-icon, header #menu-btn-element div#m
   height: 3px;
   background-color: #000;
   position: absolute;
-  transition: 2s;
+  transition: 1s background-color;
 }
 
 header #menu-btn-element div#menu-btn .menu-icon:before {
@@ -50,7 +50,7 @@ header #menu-btn-element div#menu-btn p.menu-text {
   color: #000;
   margin-bottom: 6px;
   margin-left: 30px;
-  transition: 2s;
+  transition: 1s color;
 }
 
 header #menu-btn-element:hover {

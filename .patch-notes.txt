@@ -1,4 +1,1 @@
-- Updated navigation
-- Updated error page
-- Added page title
-- Added some general styling / structure
+- Page title is now a parallax

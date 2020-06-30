@@ -30,7 +30,7 @@ header {
         height: 3px;
         background-color: $dark;
         position: absolute;
-        transition: 2s;
+        transition: 1s background-color;
       }
 
       .menu-icon {
@@ -51,7 +51,7 @@ header {
         color: #000;
         margin-bottom: 6px;
         margin-left: 30px;
-        transition: 2s;
+        transition: 1s color;
       }
     }
 

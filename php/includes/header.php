@@ -1,5 +1,5 @@
 <header>
-  <div id="menu-btn-element" onclick="menu_toggle()">
+  <div id="menu-btn-element" onclick="menuToggle()">
     <div id="menu-btn">
       <div class="menu-icon"></div>
       <p class="menu-text">Menu</p>

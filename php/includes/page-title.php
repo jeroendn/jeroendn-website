@@ -1,3 +1,5 @@
 <div class="page-title-wrapper">
-  <h1><?php echo getPageTitle(); ?></h1>
+  <div class="page-title">
+    <h1><?php echo getPageTitle(); ?></h1>
+  </div>
 </div>

@@ -1,0 +1,33 @@
+footer#footer {
+  color: #fff;
+  width: 100vw;
+  box-shadow: 0px 0px 5px 0px #000;
+
+  .footer-wrapper {
+    color: $dark;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  #bottom-bar {
+    background-color: $dark;
+    color: $light;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      font-size: 13px;
+
+      a {
+        color: $light;
+
+        &:after {
+          background-color: $light;
+        }
+      }
+    }
+  }
+}

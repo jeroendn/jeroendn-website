@@ -1,0 +1,146 @@
+header {
+  display: flex;
+
+  #menu-btn-element {
+    background-color: $light;
+    box-shadow: 1px 1px 5px #000;
+    cursor: pointer;
+    height: 500px;
+    margin-left: 0;
+    margin-top: -310px;
+    position: fixed;
+    transform: rotate(70deg);
+    user-select: none;
+    width: 300px;
+    z-index: 4;
+    transition: background-color .5s ease-in-out;
+
+    div#menu-btn {
+      transform: rotate(-70deg);
+      position: absolute;
+      top: 305px;
+      left: 165px;
+      display: flex;
+      align-items: center;
+
+      .menu-icon, .menu-icon:before, .menu-icon:after {
+        width: 25px;
+        height: 3px;
+        background-color: $dark;
+        position: absolute;
+        transition: 1s background-color;
+      }
+
+      .menu-icon {
+        &:before {
+          content: "";
+          top: -10px;
+        }
+
+        &:after {
+          content: "";
+          bottom: -10px;
+        }
+      }
+
+      p.menu-text {
+        font-family: 'Varela Round';
+        font-size: 50px;
+        color: #000;
+        margin-bottom: 6px;
+        margin-left: 30px;
+        transition: 1s color;
+      }
+    }
+
+    &:hover {
+      background-color: $dark;
+
+      div#menu-btn {
+        .menu-icon, .menu-icon:before, .menu-icon:after {
+          background-color: $light;
+        }
+
+        p.menu-text {
+          color: #fff;
+        }
+      }
+    }
+
+    &:active {
+      background-color: #333;
+    }
+  }
+
+  nav#main-menu {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    background-color: $dark;
+    height: 100vh;
+    left: 0;
+    max-height: 100vh;
+    width: 100vw;
+    max-width: 170px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-top: 160px;
+    position: fixed;
+    transition: 400ms ease-in-out;
+    z-index: 3;
+    direction: rtl;
+    box-shadow: 1px 1px 5px #000;
+
+    &.menu-closed {
+      left: -210px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li.menu-item {
+      display: block;
+      margin: 5%;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      a {
+        align-items: center;
+        background-color: $light;
+        border-radius: 8px;
+        box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
+        color: #000;
+        display: flex;
+        font-family: 'Varela Round';
+        font-size: 24px;
+        font-weight: bold;
+        height: 80px;
+        justify-content: center;
+        transition: 200ms;
+        text-decoration: none;
+      }
+
+      &:hover {
+        a {
+          background-color: $accent1;
+          color: #fff;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: none;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $light;
+    }
+  }
+}

@@ -18,28 +18,14 @@ body::-webkit-scrollbar-track {
 
 main {
   min-height: 60vh;
-}
-
-// set container responsive width's
-main, .footer-wrapper {
-  @media screen and (max-width: $bp-tablet) {
-
-  }
-
-  @media screen and (max-width: $bp-mobile) {
-
-  }
-
-  @media screen and (max-width: $bp-mobile-small) {
-
-  }
+  background-color: #fff;
 }
 
 p {
   margin: 0;
 }
 
-p > a {
+a {
   color: $accent1;
   text-decoration: none;
   position: relative;
@@ -80,11 +66,11 @@ p > a {
   overflow: hidden;
 
   .page-title {
-    position: fixed;
+    //position: fixed;
 
     h1 {
       margin: 0;
-      font-family: 'Varela Round';
+      font-family: $font;
 
       &::first-letter {
         text-transform: uppercase;
@@ -102,8 +88,4 @@ p > a {
     transform: rotateZ(-1deg);
     box-shadow: 0px -2px 2px 0px #fff;
   }
-}
-
-@media (max-width: 950px) {
-
 }

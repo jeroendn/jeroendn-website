@@ -7,11 +7,20 @@ function menuToggle() {
   }
 }
 
+$('body').on('click', function(e) {
+  if (!$(e.target).closest('header').length) {
+    $('#main-menu').addClass('menu-closed');
+  }
+});
+
 $(document).ready(function() {
 
-  $('body').on('click', function(e) {
-    if (!$(e.target).closest('header').length) {
-      $('#main-menu').addClass('menu-closed');
+  $(window).scroll(function () {
+    if((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+      $('#bottom-bar').css('transform', 'unset');
+    }
+    else {
+      $('#bottom-bar').css('transform', 'translateY(' + $('#bottom-bar').outerHeight() + 'px)');
     }
   });
 

@@ -2,36 +2,64 @@ header {
   display: flex;
 
   #menu-btn-element {
-    background-color: $light;
-    box-shadow: 1px 1px 5px #000;
-    cursor: pointer;
-    height: 500px;
-    margin-left: 0;
-    margin-top: -310px;
-    position: fixed;
-    transform: rotate(70deg);
-    user-select: none;
-    width: 300px;
     z-index: 4;
-    transition: background-color .5s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    position: fixed;
+
+    @media screen and (min-width: $bp-xs) {
+      background-color: $light;
+      box-shadow: 1px 1px 5px #000;
+      height: 500px;
+      margin-left: 0;
+      margin-top: -310px;
+      transform: rotate(70deg);
+      width: 300px;
+      transition: background-color .5s ease-in-out;
+    }
+
+    @media screen and (max-width: $bp-xs - 1) {
+      width: 170px;
+    }
 
     div#menu-btn {
-      transform: rotate(-70deg);
-      position: absolute;
-      top: 305px;
-      left: 165px;
-      display: flex;
-      align-items: center;
+      @media screen and (min-width: $bp-xs) {
+        transform: rotate(-70deg);
+        position: absolute;
+        top: 305px;
+        left: 165px;
+        display: flex;
+        align-items: center;
+      }
+
+      @media screen and (max-width: $bp-xs - 1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(-45deg, transparent 15px, $dark 15px);
+      }
 
       .menu-icon, .menu-icon:before, .menu-icon:after {
         width: 25px;
         height: 3px;
         background-color: $dark;
         position: absolute;
-        transition: 1s background-color;
+
+        @media screen and (min-width: $bp-xs) {
+          transition: 1s background-color;
+        }
+
+        @media screen and (max-width: $bp-xs - 1) {
+          background-color: $light;
+        }
       }
 
       .menu-icon {
+        @media screen and (max-width: $bp-xs - 1) {
+          position: relative;
+          top: -2px;
+        }
+
         &:before {
           content: "";
           top: -10px;
@@ -44,17 +72,27 @@ header {
       }
 
       p.menu-text {
-        font-family: 'Varela Round';
-        font-size: 50px;
-        color: #000;
-        margin-bottom: 6px;
-        margin-left: 30px;
-        transition: 1s color;
+        @media screen and (min-width: $bp-xs) {
+          font-family: $font;
+          font-size: 50px;
+          color: #000;
+          margin-bottom: 6px;
+          margin-left: 30px;
+          transition: 1s color;
+        }
+
+        @media screen and (max-width: $bp-xs - 1) {
+          color: #fff;
+          font-size: 34px;
+          margin-left: 10px;
+        }
       }
     }
 
     &:hover {
-      background-color: $dark;
+      @media screen and (min-width: $bp-xs) {
+        background-color: $dark;
+      }
 
       div#menu-btn {
         .menu-icon, .menu-icon:before, .menu-icon:after {
@@ -65,10 +103,6 @@ header {
           color: #fff;
         }
       }
-    }
-
-    &:active {
-      background-color: #333;
     }
   }
 
@@ -92,6 +126,10 @@ header {
     direction: rtl;
     box-shadow: 1px 1px 5px #000;
 
+    @media screen and (max-width: $bp-xs - 1) {
+      padding-top: 60px;
+    }
+
     &.menu-closed {
       left: -210px;
     }
@@ -113,16 +151,20 @@ header {
         align-items: center;
         background-color: $light;
         border-radius: 8px;
-        box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.8);
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.8);
         color: #000;
         display: flex;
-        font-family: 'Varela Round';
+        font-family: $font;
         font-size: 24px;
         font-weight: bold;
         height: 80px;
         justify-content: center;
         transition: 200ms;
         text-decoration: none;
+
+        &:after {
+          display: none;
+        }
       }
 
       &:hover {

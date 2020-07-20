@@ -1,6 +1,37 @@
 <footer id="footer" class="mt-5">
-  <div class="footer-wrapper">
+  <div class="footer-wrapper container py-4">
+    <div class="row">
 
+      <div class="col-md mb-3">
+        <h5>Pagina's</h5>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="{{ route('projects') }}">Projects</a></li>
+          <li><a href="{{ route('contact') }}">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md mb-3">
+        <h5>Schoolprojecten</h5>
+        <ul>
+          <li><a href="/project/garageochten">GarageOchten</a></li>
+          <li><a href="/project/socialmedia">SocialMedia</a></li>
+          <li><a href="/project/cloudstorage">CloudStorage</a></li>
+          <li><a href="/project/snoepwinkel">Snoepwinkel</a></li>
+          <li><a href="/project/nepflix/login/index.php">Nepflix</a></li>
+          <li><a href="/project/bladerblokken/index.html">Bladerblokken</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md mb-3">
+        <h5>Externe Links</h5>
+        <ul>
+          <li><a href="https://github.com/jeroendn" target="_blank">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/jeroen-de-nijs-437a191b1/" target="_blank">LinkedIn</a></li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 
   <div id="bottom-bar">

@@ -28,30 +28,31 @@ p {
   margin: 0;
 }
 
-a {
-  color: #c95f00;
+a:not(.btn) {
+  color: #f06414;
   text-decoration: none;
   position: relative;
+  transition: color 150ms ease;
 }
 
-a:after {
+a:not(.btn):after {
   content: "";
   position: absolute;
   bottom: 1px;
   left: 0;
   width: 100%;
   height: 1px;
-  background-color: #c95f00;
+  background-color: #f06414;
   transition: width 200ms ease;
   opacity: 0.75;
 }
 
-a:hover {
+a:not(.btn):hover {
   text-decoration: none;
-  color: #c95f00;
+  color: #F79D19;
 }
 
-a:hover:after {
+a:not(.btn):hover:after {
   width: 0;
   left: unset;
   right: 0;
@@ -284,7 +285,7 @@ header nav#main-menu li.menu-item a:after {
 }
 
 header nav#main-menu li.menu-item:hover a {
-  background-color: #c95f00;
+  background-color: #f06414;
   color: #fff;
 }
 

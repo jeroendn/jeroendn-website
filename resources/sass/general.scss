@@ -25,10 +25,11 @@ p {
   margin: 0;
 }
 
-a {
+a:not(.btn) {
   color: $accent1;
   text-decoration: none;
   position: relative;
+  transition: color 150ms ease;
 
   &:after {
     content: '';
@@ -44,7 +45,7 @@ a {
 
   &:hover {
     text-decoration: none;
-    color: $accent1;
+    color: $accent2;
 
     &:after {
       width: 0;

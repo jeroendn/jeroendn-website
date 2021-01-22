@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', 'PageController@index')->name('home');
-Route::get('/home', 'PageController@index')->name('home');
-Route::get('/projects', 'PageController@projects')->name('projects');
-Route::get('/contact', 'PageController@contact')->name('contact');
+// Public views
+Route::get('/', 'PublicController@index')->name('home');
+Route::get('/home', 'PublicController@index')->name('home');
+Route::get('/projects', 'PublicController@projects')->name('projects');
+Route::get('/contact', 'PublicController@contact')->name('contact');
+// Tools views
+Route::get('/tools', 'ToolsController@index')->name('tools');
+Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('youtube-downloader');

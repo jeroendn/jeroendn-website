@@ -11,22 +11,26 @@
   <meta name="theme-color" content="#000000">
 
   <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
-  <script src="{{ asset('js/script.js') }}" defer></script>
+  <script src="{{ asset('/js/app.js') }}" defer></script>
+  <script src="{{ asset('/js/app.js.map') }}" defer></script>
+  <script src="{{ asset('/js/script.js') }}" defer></script>
+  <script src="{{ asset('/js/script.js.map') }}" defer></script>
 
   <!-- Fonts -->
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/app.css.map') }}" rel="stylesheet">
+  <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/style.css.map') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
   @include('includes.header')
 
-  @include('includes.page-title')
+  @include('includes.pageTitle')
 
   <main class="py-5">
     @yield('content')

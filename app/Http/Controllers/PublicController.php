@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PageController extends Controller
+class PublicController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -17,24 +17,18 @@ class PageController extends Controller
         // $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-
     public function index()
     {
-        return view('pages.home');
+        return view('public.home');
     }
 
     public function projects()
     {
-        return view('pages.projects');
+        return view('public.projects');
     }
 
     public function contact()
     {
-        return view('pages.contact');
+        return view('public.contact');
     }
 }

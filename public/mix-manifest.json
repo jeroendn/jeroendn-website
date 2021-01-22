@@ -1,5 +1,12 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/css/style.css": "/css/style.css"
+    "/css/style.css": "/css/style.css",
+    "/css/tools.css": "/css/tools.css",
+    "/js/app.js.map": "/js/app.js.map",
+    "/css/app.css.map": "/css/app.css.map",
+    "/css/style.css.map": "/css/style.css.map",
+    "/css/tools.css.map": "/css/tools.css.map",
+    "/js/script.js": "/js/script.js",
+    "/js/script.js.map": "/js/script.js.map"
 }

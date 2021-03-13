@@ -21,8 +21,8 @@ class CreateUserRolesTable extends Migration
 
         DB::table('user_roles')->insert([
             ['name' => 'Admin'],
-            ['name' => 'User'],
-            ['name' => 'Premium User']
+            ['name' => 'Premium User'],
+            ['name' => 'User']
         ]);
     }
 

@@ -1,15 +1,12 @@
-## Changelog V1.1 ##
-Date published: 22 Jan 2021
+## Changelog V1.1.1 ##
+Date published: 13 Mar 2021
 
 ### New features & changes ###
-- Added user roles including middleware
-- Added tools back-end environment
-- Added source mapping for CSS & js
-- Added youtube downloader to the tools
+- Added database table for projects
+- Added instagram downloader to the tools
 
 ### Bug fixes ###
-- Added a robot.txt to exclude project directory
-
+- User role id in migration fix
 
 ## Version update procedure ##
 1. Check README + config contents and version/date

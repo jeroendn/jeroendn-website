@@ -24,3 +24,4 @@ Route::get('/contact', 'PublicController@contact')->name('contact');
 // Tools views
 Route::get('/tools', 'ToolsController@index')->name('tools');
 Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('youtube-downloader');
+Route::get('/tools/instagram-downloader', 'ToolsController@instaDownloader')->name('instagram-downloader');

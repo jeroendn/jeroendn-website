@@ -7,7 +7,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>{{ Route::currentRouteName() . ' - ' . config('app.name') }}</title>
+  <title>{{ ucwords(str_replace('.', ' ', Route::currentRouteName())) . ' - ' . config('app.name') }}</title>
   <meta name="theme-color" content="#000000">
 
   <!-- Scripts -->
@@ -22,9 +22,9 @@
 
   <!-- Styles -->
   <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-  <link href="{{ asset('/css/app.css.map') }}" rel="stylesheet">
+  <link href="{{ asset('/css/app.css.map') }}" rel="json">
   <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
-  <link href="{{ asset('/css/style.css.map') }}" rel="stylesheet">
+  <link href="{{ asset('/css/style.css.map') }}" rel="json">
 </head>
 <body>
 <div id="app">

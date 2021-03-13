@@ -44,7 +44,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Downloaders</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="{{ route('youtube-downloader') }}">Youtube</a>
-                            <a class="dropdown-item disabled" href="#"><i>Instagram</i></a>
+                            <a class="dropdown-item" href="{{ route('instagram-downloader') }}">Instagram</a>
                         </div>
                     </li>
                 </ul>

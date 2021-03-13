@@ -14,12 +14,9 @@
       <div class="col-md mb-3">
         <h5>Schoolprojecten</h5>
         <ul>
-          <li><a href="/project/garageochten">GarageOchten</a></li>
-          <li><a href="/project/socialmedia">SocialMedia</a></li>
-          <li><a href="/project/cloudstorage">CloudStorage</a></li>
-          <li><a href="/project/snoepwinkel">Snoepwinkel</a></li>
-          <li><a href="/project/nepflix/login/index.php">Nepflix</a></li>
-          <li><a href="/project/bladerblokken/index.html">Bladerblokken</a></li>
+        @foreach($projects as $project)
+            <li><a href="<?= $project->url ?>"><?= $project->name ?></a></li>
+        @endforeach
         </ul>
       </div>
 

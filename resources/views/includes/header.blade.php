@@ -11,7 +11,7 @@
       <li class="menu-item"><a href="{{ route('home') }}">Home</a></li>
       <li class="menu-item"><a href="{{ route('projects') }}">Projects</a></li>
       <li class="menu-item"><a href="{{ route('contact') }}">Contact</a></li>
-      @if (isset(Auth::user()->role->id) && Auth::user()->role->id === 1 || isset(Auth::user()->role->id) && Auth::user()->role->id === 2)
+      @if ($isAdmin || $isPremiumUser)
         <li class="menu-item"><a href="{{ route('tools') }}">Tools</a></li>
       @endif
     </ul>

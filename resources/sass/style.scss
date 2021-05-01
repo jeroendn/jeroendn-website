@@ -2,9 +2,10 @@
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 
 // Variables
-@import 'var';
+@import "var";
 
 // Stylesheets
-@import 'general';
-@import 'header';
-@import 'footer';
+@import "general";
+@import "admin-bar";
+@import "header";
+@import "footer";

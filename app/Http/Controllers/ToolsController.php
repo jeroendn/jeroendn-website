@@ -2,25 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use YouTube\YouTubeDownloader;
 use Ayesh\InstagramDownload\InstagramDownload;
 
 class ToolsController extends Controller
 {
+    /**
+     * ToolsController constructor.
+     */
     public function __construct()
     {
         $this->middleware('auth');
         $this->middleware('role:1|2');
     }
 
+    /**
+     * @return Application|Factory|View
+     */
     public function index()
     {
         return view('tools.index');
     }
 
+    /**
+     * @param Request $request
+     * @return Application|Factory|View
+     */
     public function youtubeDownloader(Request $request)
     {
         $submittedUrl = $request->input('url');
@@ -34,6 +45,10 @@ class ToolsController extends Controller
         return view('tools.youtubeDownloader');
     }
 
+    /**
+     * @param Request $request
+     * @return Application|Factory|View
+     */
     public function instaDownloader(Request $request)
     {
         $submittedUrl = $request->input('url');

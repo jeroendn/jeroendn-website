@@ -17,11 +17,16 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 // Public views
-Route::get('/', 'PublicController@index')->name('home');
+Route::get('/', 'PublicController@index')->name('root');
 Route::get('/home', 'PublicController@index')->name('home');
 Route::get('/projects', 'PublicController@projects')->name('projects');
 Route::get('/contact', 'PublicController@contact')->name('contact');
+// Admin for public views
+Route::get('/admin', 'AdminController@index')->name('admin');
+Route::get('/admin/home', 'AdminController@index')->name('admin.home');
+Route::get('/admin/projects', 'AdminController@projects')->name('admin.projects');
+Route::post('/admin/projects', 'AdminController@projects')->name('admin.projects');
 // Tools views
 Route::get('/tools', 'ToolsController@index')->name('tools');
-Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('youtube-downloader');
-Route::get('/tools/instagram-downloader', 'ToolsController@instaDownloader')->name('instagram-downloader');
+Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('tools.youtube-downloader');
+Route::get('/tools/instagram-downloader', 'ToolsController@instaDownloader')->name('tools.instagram-downloader');

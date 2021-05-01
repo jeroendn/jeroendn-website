@@ -1,12 +1,16 @@
-## Changelog V1.1.1 ##
-Date published: 13 Mar 2021
+## Changelog V1.1.2 ##
+Date published: 1 May 2021
 
 ### New features & changes ###
-- Added database table for projects
-- Added instagram downloader to the tools
+- Updated to PHP 8 and Laravel 8
+- Added admin environment
+- Routing improvements
+- Added comments on controller functions
+- Added a helpers.php for global functions
+- Added projects show/hide admin page 
 
 ### Bug fixes ###
-- User role id in migration fix
+- 
 
 ## Version update procedure ##
 1. Check README + config contents and version/date

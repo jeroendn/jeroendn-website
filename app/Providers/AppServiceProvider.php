@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
@@ -14,8 +15,7 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
-    {
+    public function register() {
         //
     }
 
@@ -24,11 +24,9 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
+    public function boot() {
         // Set variables for all views after session has been started
-        View::composer('*', function ()
-        {
+        View::composer('*', function () {
             $isAdmin = (isset(Auth::user()->role->id) && Auth::user()->role->id === 1);
             View::share('isAdmin', $isAdmin);
 
@@ -40,7 +38,8 @@ class AppServiceProvider extends ServiceProvider
 
             if ($isAdmin) {
                 $projects = DB::table('projects')->get()->sortByDesc('id');
-            } else {
+            }
+            else {
                 $projects = DB::table('projects')->get()->where('show', '1')->sortByDesc('id');
             }
             View::share('projects', $projects);

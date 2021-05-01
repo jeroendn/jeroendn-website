@@ -4,7 +4,7 @@
     <div class="container">
 
         <h1>Insta downloader</h1>
-        <form class="mb-5" method="get" action="{{ route('instagram-downloader') }}">
+        <form class="mb-5" method="get" action="{{ route('tools.instagram-downloader') }}">
             <div class="mb-3">
                 <label for="downloadUrl" class="form-label">Enter a youtube video URL:</label>
                 <input type="text" class="form-control" name="url" id="downloadUrl" placeholder="URL" required>

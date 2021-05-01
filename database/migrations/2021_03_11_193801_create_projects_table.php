@@ -19,7 +19,7 @@ class CreateProjectsTable extends Migration
             $table->string('name');
             $table->string('url');
             $table->text('description')->nullable();
-            $table->boolean('show');
+            $table->boolean('show')->default(false);
             $table->timestamps();
         });
 

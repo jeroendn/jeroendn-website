@@ -25,7 +25,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}">{{ config('app.name') }}</a>
+            <a class="navbar-brand" href="{{ route('root') }}">{{ config('app.name') }}</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,8 +43,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Downloaders</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('youtube-downloader') }}">Youtube</a>
-                            <a class="dropdown-item" href="{{ route('instagram-downloader') }}">Instagram</a>
+                            <a class="dropdown-item" href="{{ route('tools.youtube-downloader') }}">Youtube</a>
+                            <a class="dropdown-item" href="{{ route('tools.instagram-downloader') }}">Instagram</a>
                         </div>
                     </li>
                 </ul>
@@ -66,7 +66,7 @@
 
     <footer class="bg-dark text-light">
         <div class="text-center py-3">Copyright &copy; 2020 - <?php echo date('Y', $_SERVER['REQUEST_TIME']); ?>
-            <a href="{{ route('home') }}">{{ config('app.name') }}</a>
+            <a href="{{ route('root') }}">{{ config('app.name') }}</a>
         </div>
     </footer>
 

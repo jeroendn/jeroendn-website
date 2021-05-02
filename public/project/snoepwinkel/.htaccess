@@ -1,0 +1,29 @@
+#DON'T SHOW DIRECTORY LISTINGS
+Options -Indexes
+
+ErrorDocument 400 /pages/error.php
+ErrorDocument 401 /pages/error.php
+ErrorDocument 403 /pages/error.php
+ErrorDocument 404 /pages/error.php
+ErrorDocument 405 /pages/error.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^$ pages/home.php
+RewriteRule ^home$ pages/home.php
+RewriteRule ^shop$ pages/shop.php
+RewriteRule ^product$ pages/product.php
+RewriteRule ^cart$ pages/cart.php
+RewriteRule ^checkout$ pages/checkout.php
+RewriteRule ^order_status$ pages/order_status.php
+
+RewriteRule ^beheer$ admin/pages/dashboard.php
+RewriteRule ^beheer/login$ admin/pages/login.php
+RewriteRule ^beheer/dashboard$ admin/pages/dashboard.php
+RewriteRule ^beheer/producten$ admin/pages/producten.php
+RewriteRule ^beheer/bestellingen$ admin/pages/orders.php
+
+DirectoryIndex index.php

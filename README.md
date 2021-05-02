@@ -1,16 +1,12 @@
-## Changelog V1.1.2 ##
-Date published: 1 May 2021
+## Changelog V1.1.3 ##
+Date published: 2 May 2021
 
 ### New features & changes ###
-- Updated to PHP 8 and Laravel 8
-- Added admin environment
-- Routing improvements
-- Added comments on controller functions
-- Added a helpers.php for global functions
-- Added projects show/hide admin page 
+- Updated composer and npm
+- Added project files for: snoepwinkel, cloudstorage, socialmedia, garageochten. (Note that these projects don't load properly on local env. & DB password isn't set)
 
 ### Bug fixes ###
-- 
+- Fixed url's towards projects to keep https
 
 ## Version update procedure ##
 1. Check README + config contents and version/date

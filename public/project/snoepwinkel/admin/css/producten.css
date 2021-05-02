@@ -1,0 +1,90 @@
+#products .btn-add {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#products #product-add.card {
+  display: none;
+  padding: 15px;
+}
+
+#products #product-add.card .price {
+  display: flex;
+}
+
+#products #product-add.card .img {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+#products #product-add.card .btn {
+  width: 100%;
+}
+
+#products .card {
+  width: 100% !important;
+  flex-flow: row wrap;
+  margin-bottom: 5px;
+}
+
+#products .card input, #products .card textarea {
+  margin-bottom: 5px;
+}
+
+#products .card .img {
+  flex: 0 0 20%;
+  max-width: 20%;
+  display: flex;
+  flex-flow: wrap;
+}
+
+#products .card .img img {
+  object-fit: contain;
+  height: calc(100% - 38px);
+}
+
+#products .card .card-body {
+  flex: 0 0 70%;
+  max-width: 70%;
+}
+
+#products .card .price {
+  display: flex;
+  align-items: center;
+}
+
+#products .card .price span {
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+
+#products .card .price span:first-child {
+  margin-right: 5px;
+}
+
+#products .card .price span:last-child {
+  margin-left: 5px;
+}
+
+#products .card .price input {
+  max-width: 100px;
+}
+
+#products .card .price input::-webkit-outer-spin-button, #products .card .price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#products .card textarea {
+  min-height: 90px;
+}
+
+#products .card .buttons {
+  flex: 0 0 10%;
+  max-width: 10%;
+  display: flex;
+  flex-flow: column;
+}
+
+#products .card .buttons button {
+  flex: auto;
+}

@@ -1,0 +1,60 @@
+#order-status form.status-form input[type="number"]::-webkit-inner-spin-button, #orders form.status-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#order-status .order-item, #orders .order-item {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#order-status .order-item:not(:last-child), #orders .order-item:not(:last-child) {
+  border-bottom: 1px solid #aaa;
+}
+
+#order-status .order-item img, #orders .order-item img {
+  height: 100%;
+  width: 100px;
+  object-fit: cover;
+}
+
+#order-status .order-item .title, #orders .order-item .title {
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 0 0 0 15px;
+}
+
+#order-status .order-item .quantity, #orders .order-item .quantity {
+  margin-bottom: 0;
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+#order-status .order-item .price, #orders .order-item .price {
+  flex: 0 0 40%;
+  max-width: calc(40% - 100px);
+  text-align: right;
+}
+
+#orders .btn-show-order {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+#orders .order {
+  display: none;
+}
+
+#orders .order .order-info .btn-warning {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -5px;
+}
+
+#orders .btn-close-all {
+  position: fixed;
+  left: 1%;
+  bottom: 1%;
+}

@@ -1,0 +1,122 @@
+#documents .card, #shares .card {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#documents .card .data, #shares .card .data {
+  flex: 0 0 55%;
+  max-width: 55%;
+  display: flex;
+}
+
+@media screen and (max-width: 778px) {
+  #documents .card .data, #shares .card .data {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+#documents .card .data img, #documents .card .data video, #shares .card .data img, #shares .card .data video {
+  flex: 0 0 25%;
+  max-width: 25%;
+  height: 40px;
+  object-fit: cover;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#documents .card .data img:hover:not(:active), #documents .card .data video:hover:not(:active), #shares .card .data img:hover:not(:active), #shares .card .data video:hover:not(:active) {
+  opacity: .7;
+}
+
+#documents .card .data img:active, #documents .card .data video:active, #shares .card .data img:active, #shares .card .data video:active {
+  height: auto;
+  width: 100%;
+}
+
+#documents .card .data video:hover, #shares .card .data video:hover {
+  height: auto;
+  width: 100%;
+  opacity: 1 !important;
+}
+
+#documents .card .data p, #shares .card .data p {
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+#documents .card .data p.card-title, #shares .card .data p.card-title {
+  flex: 0 0 25%;
+  max-width: 25%;
+  word-break: break-all;
+}
+
+#documents .card .data p.file-size, #shares .card .data p.file-size {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+#documents .card .data p.date, #shares .card .data p.date {
+  flex: 0 0 30%;
+  max-width: 30%;
+}
+
+#documents .card .buttons, #shares .card .buttons {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 778px) {
+  #documents .card .buttons, #shares .card .buttons {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+}
+
+#documents .card .buttons .btn, #shares .card .buttons .btn {
+  display: flex;
+  align-items: center;
+  flex: 0 0 30%;
+  max-width: 30%;
+  justify-content: center;
+}
+
+#documents .card .share, #shares .card .share {
+  flex: 0 0 100%;
+  display: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#documents .card .share .current-share .container, #shares .card .share .current-share .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#documents .card .share .current-share p, #shares .card .share .current-share p {
+  margin-bottom: 0;
+}
+
+#documents .card .share .current-share button, #shares .card .share .current-share button {
+  white-space: nowrap;
+}
+
+#documents .card .share .add-share, #shares .card .share .add-share {
+  display: flex;
+}
+
+#documents .card .share .add-share input, #shares .card .share .add-share input {
+  margin-bottom: 0;
+}
+
+#documents .card .share .add-share button, #shares .card .share .add-share button {
+  white-space: nowrap;
+  margin-left: 10px;
+}

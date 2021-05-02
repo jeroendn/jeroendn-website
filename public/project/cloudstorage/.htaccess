@@ -1,0 +1,28 @@
+#DON'T SHOW DIRECTORY LISTINGS
+Options -Indexes
+
+ErrorDocument 400 /pages/error.php
+ErrorDocument 401 /pages/error.php
+ErrorDocument 403 /pages/error.php
+ErrorDocument 404 /pages/error.php
+ErrorDocument 405 /pages/error.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteRule ^$ pages/login.php
+RewriteRule ^home$ pages/login.php
+RewriteRule ^login$ pages/login.php
+RewriteRule ^logout$ php/ajax/logout_submit.php
+RewriteRule ^documents$ pages/documents.php
+RewriteRule ^shares$ pages/shares.php
+RewriteRule ^dashboard$ admin/pages/dashboard.php
+
+DirectoryIndex index.php
+
+<FilesMatch "\.(ini|psd|log|sh)$">
+Order allow,deny
+Deny from all
+</FilesMatch>

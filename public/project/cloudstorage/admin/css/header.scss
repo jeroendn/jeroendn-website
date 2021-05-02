@@ -1,0 +1,39 @@
+@import '../../css/header.css';
+
+header#header {
+  padding-right: 10%;
+  padding-left: 10%;
+  background-color: #333;
+  background-image: url('../../design/cloud.svg');
+  background-repeat: no-repeat;
+  background-position: 10%;
+  background-size: contain;
+
+  &.floating {
+  }
+
+  .header-logo {
+    a {
+    }
+  }
+
+  #nav-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+
+    ul.menu {
+      padding-left: 0;
+
+      li.menu-item {
+        a {
+          &:hover {
+          }
+        }
+      }
+
+      &#menu-right {
+        margin-right: 0;
+      }
+    }
+  }
+}

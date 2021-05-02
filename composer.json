@@ -1,11 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "jeroendn/jeroendn-website",
+    "description": "My personal website",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": [
-        "framework",
-        "laravel"
-    ],
     "license": "MIT",
     "require": {
         "php": "^8.0",

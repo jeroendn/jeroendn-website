@@ -1,0 +1,38 @@
+#checkout .order-status {
+  width: 100%;
+}
+
+#checkout .order-status p {
+  align-items: center;
+  background: transparant;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  margin-bottom: 0;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+#checkout .order-status p.success {
+  background: #afd275;
+  display: flex;
+}
+
+#checkout .order-status p.empty {
+  background: #ff9000;
+  display: flex;
+}
+
+#checkout .order-status p.error {
+  background: #f00;
+  display: flex;
+}
+
+#checkout form.checkout-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

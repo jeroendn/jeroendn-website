@@ -1,0 +1,245 @@
+@charset "UTF-8";
+#feed section.swipe {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#feed section.swipe p {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+}
+
+#feed section.swipe p:first-of-type {
+  margin-left: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  #feed section.swipe p:first-of-type {
+    margin-left: 10px;
+  }
+}
+
+#feed section.swipe p:last-of-type {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 500px) {
+  #feed section.swipe p:last-of-type {
+    margin-right: 10px;
+  }
+}
+
+#feed section.swipe p .left:before, #feed section.swipe p .right:before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 30px;
+  display: block;
+  line-height: initial;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+#feed section.swipe p .left:before {
+  content: '\f100';
+  animation-name: swipe-left;
+}
+
+#feed section.swipe p .right:before {
+  content: '\f101';
+  animation-name: swipe-right;
+}
+
+@keyframes swipe-left {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swipe-right {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#feed section.swipe img {
+  height: 40px;
+  animation-duration: 5s;
+  animation-name: swipe-icon;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes swipe-icon {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  75% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#feed section.posts, #profile .profile-posts section.posts, #post section.posts {
+  border-bottom: 1px solid #f7f7f7;
+}
+
+#feed .post, #profile .profile-posts .post, #post .post {
+  background-image: url("../design/sticky_note_pink.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 90px;
+  flex-flow: row wrap;
+  align-items: center;
+  position: relative;
+  display: flex;
+  transition: opacity 500ms ease;
+  left: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 840px) {
+  #feed .post, #profile .profile-posts .post, #post .post {
+    padding: 10%;
+  }
+}
+
+#feed .post:not(.show), #profile .profile-posts .post:not(.show), #post .post:not(.show) {
+  visibility: hidden;
+  opacity: 0;
+  height: 0 !important;
+  padding: 0;
+}
+
+#feed .post:nth-child(3n-2), #profile .profile-posts .post:nth-child(3n-2), #post .post:nth-child(3n-2) {
+  background-image: url("../design/sticky_note_yellow.png");
+  color: #333;
+}
+
+#feed .post:nth-child(3n-1), #profile .profile-posts .post:nth-child(3n-1), #post .post:nth-child(3n-1) {
+  background-image: url("../design/sticky_note_green.png");
+  color: #333;
+}
+
+#feed .post:before, #profile .profile-posts .post:before, #post .post:before {
+  content: '';
+  background-image: url(../design/paperclip.png);
+  position: absolute;
+  top: -1%;
+  left: 16%;
+  width: 5%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+
+#feed .post img, #profile .profile-posts .post img, #post .post img {
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  width: 15%;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 5px 0px black;
+  transform: rotate(-15deg);
+  transition: transform 250ms ease-in-out;
+  background: #444;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#feed .post img:hover, #profile .profile-posts .post img:hover, #post .post img:hover {
+  transform: none;
+}
+
+#feed .post p.user, #profile .profile-posts .post p.user, #post .post p.user {
+  position: absolute;
+  top: calc(8% - 10px);
+  left: 25%;
+  font-size: 18px;
+}
+
+#feed .post p.message, #profile .profile-posts .post p.message, #post .post p.message {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  transform: rotate(-1deg);
+}
+
+@media screen and (max-width: 840px) {
+  #feed .post p.message, #profile .profile-posts .post p.message, #post .post p.message {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #feed .post p.message, #profile .profile-posts .post p.message, #post .post p.message {
+    font-size: 15px;
+  }
+}
+
+#feed .post p.like, #profile .profile-posts .post p.like, #post .post p.like {
+  position: absolute;
+  bottom: 5%;
+  left: 15%;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+@media screen and (max-width: 840px) {
+  #feed .post p.like, #profile .profile-posts .post p.like, #post .post p.like {
+    font-size: 20px;
+  }
+}
+
+#feed .post p.like:before, #profile .profile-posts .post p.like:before, #post .post p.like:before {
+  content: '👍';
+  font-size: 80px;
+  position: absolute;
+  transform: rotateY(180deg) rotateZ(-15deg);
+  right: 100%;
+  bottom: 0;
+}
+
+@media screen and (max-width: 840px) {
+  #feed .post p.like:before, #profile .profile-posts .post p.like:before, #post .post p.like:before {
+    bottom: 0;
+    font-size: calc(20px + 4vw);
+  }
+}

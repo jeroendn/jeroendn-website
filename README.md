@@ -1,18 +1,19 @@
-## Changelog V1.1.3 ##
-Date published: 2 May 2021
+## Changelog V1.2 ##
+Date published: 12 Sep 2021
 
 ### New features & changes ###
-- Updated composer and npm
-- Added project files for: snoepwinkel, cloudstorage, socialmedia, garageochten. (Note that these projects don't load properly on local env. & DB password isn't set)
+- Updated personal info
+- Updated composer
+- Started diary test environment
 
 ### Bug fixes ###
-- Fixed url's towards projects to keep https
+<em>No entry</em>
 
 ## Version update procedure ##
-1. Check README + config contents and version/date
+1. Check README contents and version/date
 2. Upload to webserver
 3. Commit to Git
-4. Clear README + config contents and version/date
+4. Clear README contents and version/date
 
 ## New development environment ##
 1. Run command: composer install

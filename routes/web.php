@@ -30,3 +30,5 @@ Route::post('/admin/projects', 'AdminController@projects')->name('admin.projects
 Route::get('/tools', 'ToolsController@index')->name('tools');
 Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('tools.youtube-downloader');
 Route::get('/tools/instagram-downloader', 'ToolsController@instaDownloader')->name('tools.instagram-downloader');
+// Diary views
+Route::get('/diary', 'DiaryController@index')->name('diary');

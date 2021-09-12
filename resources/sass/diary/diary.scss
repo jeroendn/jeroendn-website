@@ -1,0 +1,21 @@
+details {
+    > summary {
+        list-style-type: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &:after {
+            content: 'Show';
+        }
+    }
+
+    &[open] {
+        > summary {
+            &:after {
+                content: '';
+            }
+        }
+    }
+}

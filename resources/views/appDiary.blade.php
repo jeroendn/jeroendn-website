@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ Route::currentRouteName() . ' - ' . config('app.name') }}</title>
-    <meta name="theme-color" content="#343a40">
+    <meta name="theme-color" content="#000000">
 
     <!-- Scripts -->
     <script src="{{ asset('/js/app.js') }}" defer></script>
@@ -17,8 +17,8 @@
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('/css/app.css.map') }}" rel="stylesheet">
-    <link href="{{ asset('/css/tools.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/tools.css.map') }}" rel="stylesheet">
+    <link href="{{ asset('/css/diary.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/diary.css.map') }}" rel="stylesheet">
 </head>
 <body>
 <div id="app">
@@ -32,20 +32,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('tools') }}">Tools</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Converters</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item disabled" href="#"><i>Future update</i></a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Downloaders</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('tools.youtube-downloader') }}">Youtube</a>
-                            <a class="dropdown-item" href="{{ route('tools.instagram-downloader') }}">Instagram</a>
-                        </div>
+                        <a class="nav-link" href="{{ route('diary') }}">Diary</a>
                     </li>
                 </ul>
             </div>
@@ -65,7 +52,7 @@
     </main>
 
     <footer class="bg-dark text-light">
-        <div class="text-center py-3">Copyright &copy; 2020 - <?php echo date('Y', $_SERVER['REQUEST_TIME']); ?>
+        <div class="text-center py-3">Copyright &copy; 2021 - <?php echo date('Y', $_SERVER['REQUEST_TIME']); ?>
             <a href="{{ route('root') }}">{{ config('app.name') }}</a>
         </div>
     </footer>

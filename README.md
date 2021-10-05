@@ -1,10 +1,9 @@
-## Changelog V1.2 ##
-Date published: 12 Sep 2021
+## Changelog V1.2.1 ##
+Date published: 5 Okt 2021
 
 ### New features & changes ###
-- Updated personal info
-- Updated composer
-- Started diary test environment
+- Updated Composer
+- Updated npm
 
 ### Bug fixes ###
 <em>No entry</em>

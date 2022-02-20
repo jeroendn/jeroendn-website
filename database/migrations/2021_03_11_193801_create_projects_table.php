@@ -28,8 +28,7 @@ class CreateProjectsTable extends Migration
             ['name' => 'Nepflix', 'url' => 'https://jeroendn.nl/project/nepflix/login/index.php', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
             ['name' => 'Webshop', 'url' => 'https://jeroendn.nl/project/snoepwinkel/home', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
             ['name' => 'CloudStorage', 'url' => 'https://jeroendn.nl/cloudstorage/login', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'SocialMedia', 'url' => 'https://jeroendn.nl/project/socialmedia/login', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'GarageApplicatie', 'url' => 'https://jeroendn.nl/project/garageochten', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")]
+            ['name' => 'SocialMedia', 'url' => 'https://jeroendn.nl/project/socialmedia/login', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")]
         ]);
     }
 

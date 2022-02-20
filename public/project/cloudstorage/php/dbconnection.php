@@ -1,7 +1,7 @@
 <?php
 $servername = "web0098.zxcs.nl";
 $db_username = "u71481p69034_projects";
-$db_password = "";
+$db_password = $_SESSION['DB_PASSWORD_PROJECTS'];
 $db_name = "u71481p69034_cloudstorage";
 
 try {

@@ -16,6 +16,9 @@ class PublicController extends Controller
     {
         // Require all pages to be logged in
         // $this->middleware('auth');
+
+        session_start();
+        $_SESSION['DB_PASSWORD_PROJECTS'] = env('DB_PASSWORD_PROJECTS');
     }
 
     /**

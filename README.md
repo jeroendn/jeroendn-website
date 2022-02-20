@@ -1,9 +1,8 @@
-## Changelog V1.2.1 ##
-Date published: 5 Okt 2021
+## Changelog V1.2.2 ##
+Date published: 20 Feb 2022
 
 ### New features & changes ###
-- Updated Composer
-- Updated npm
+- Updated projects to have the db password configured in the .env file.
 
 ### Bug fixes ###
 <em>No entry</em>

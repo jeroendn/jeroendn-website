@@ -1,11 +1,12 @@
-## Changelog V1.2.3 ##
-Date published: 30 Oct 2022
+## Changelog V1.2.4 ##
+Date published: 10 Nov 2022
 
 ### New features & changes ###
-- Dependency updates.
+- Resolved local conflicts.
+- Added AI image generator POC to tools environment.
 
 ### Bug fixes ###
-- None
+- Fixed Nepflix session_start() not being set early enough in login.
 
 ## Version update procedure ##
 1. Check README contents and version/date.
@@ -16,4 +17,4 @@ Date published: 30 Oct 2022
 ## New development environment ##
 1. Run command: ```composer install```.
 2. Run command: ```npm install```.
-3. Use the command ```npm run watch``` to compile SCSS and JS.
+3. Use the command ```npx mix watch``` to compile SCSS and JS.

@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 if (isset($_POST['login-submit'])) {
 
@@ -28,26 +29,25 @@ if (isset($_POST['login-submit'])) {
 			$passwordCheck = password_verify($password, $row['user_password']);
 			if ($passwordCheck == false) {
 				header("Location: ../login/index.php?error=wrongpassword");
-				exit();	
+				exit();
 			}
 			else if ($passwordCheck == true) {
 				//Alles na het inloggen
-				session_start();
 				$_SESSION['userId'] = $row['user_id'];
 				$_SESSION['userUsername'] = $row['user_username'];
 
 				header("Location: ../login/index.php?login=success");
-				exit();						
-				
+				exit();
+
 			}
 			else {
 				header("Location: ../login/index.php?error=wrongpassword");
-				exit();						
+				exit();
 			}
 		}
 		else {
 			header("Location: ../login/index.php?error=nouserfound");
-			exit();				
+			exit();
 		}
 	}
 

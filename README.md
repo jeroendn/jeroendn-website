@@ -1,9 +1,8 @@
-## Changelog V1.2.5 ##
+## Changelog V1.2.6 ##
 Date published: 22 Dec 2022
 
 ### New features & changes ###
-- Updated composer and npm dependencies.
-- Removed AI image generator POC to tools environment.
+- Updated to Laravel 9.
 
 ### Bug fixes ###
 - None

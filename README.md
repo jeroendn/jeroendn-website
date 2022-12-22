@@ -1,12 +1,12 @@
-## Changelog V1.2.4 ##
-Date published: 10 Nov 2022
+## Changelog V1.2.5 ##
+Date published: 22 Dec 2022
 
 ### New features & changes ###
-- Resolved local conflicts.
-- Added AI image generator POC to tools environment.
+- Updated composer and npm dependencies.
+- Removed AI image generator POC to tools environment.
 
 ### Bug fixes ###
-- Fixed Nepflix session_start() not being set early enough in login.
+- None
 
 ## Version update procedure ##
 1. Check README contents and version/date.

@@ -7,7 +7,6 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use InvalidArgumentException;
-use Orhanerday\OpenAi\OpenAi;
 use RuntimeException;
 use YouTube\YouTubeDownloader;
 use Ayesh\InstagramDownload\InstagramDownload;
@@ -88,30 +87,5 @@ class ToolsController extends Controller
         }
 
         return view('tools.instaDownloader');
-    }
-
-    /**
-     * @param Request $request
-     * @return Application|Factory|View
-     */
-    public function imageGenerator(Request $request)
-    {
-        // TODO implement DALL-E when having access to API
-        $open_ai = new OpenAi(env('OPEN_AI_API_KEY'));
-
-//        $complete = $open_ai->complete([
-//            'engine' => 'davinci',
-//            'prompt' => 'Hello',
-//            'temperature' => 0.9,
-//            'max_tokens' => 150,
-//            'frequency_penalty' => 0,
-//            'presence_penalty' => 0.6,
-//        ]);
-//        dd($complete);
-
-        $engines = $open_ai->engines();
-        dd($engines);
-
-        return view('tools.imageGenerator');
     }
 }

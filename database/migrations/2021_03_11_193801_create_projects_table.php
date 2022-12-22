@@ -12,7 +12,7 @@ class CreateProjectsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
@@ -24,11 +24,12 @@ class CreateProjectsTable extends Migration
         });
 
         DB::table('projects')->insert([
-            ['name' => 'Bladerblokken', 'url' => 'https://jeroendn.nl/project/bladerblokken/index.html', 'description' => NULL, 'show' => false, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'Nepflix', 'url' => 'https://jeroendn.nl/project/nepflix/login/index.php', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'Webshop', 'url' => 'https://jeroendn.nl/project/snoepwinkel/home', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'CloudStorage', 'url' => 'https://jeroendn.nl/cloudstorage/login', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'SocialMedia', 'url' => 'https://jeroendn.nl/project/socialmedia/login', 'description' => NULL, 'show' => true, 'created_at' => date("Y-m-d H:i:s")]
+            ['name' => 'Bladerblokken', 'url' => 'https://jeroendn.nl/project/bladerblokken/index.html', 'description' => null, 'show' => false, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'Nepflix', 'url' => 'https://jeroendn.nl/project/nepflix/login/index.php', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'Webshop', 'url' => 'https://jeroendn.nl/project/snoepwinkel/home', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'CloudStorage', 'url' => 'https://jeroendn.nl/cloudstorage/login', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'SocialMedia', 'url' => 'https://jeroendn.nl/project/socialmedia/login', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'Nepflix (Remastered)', 'url' => 'https://dev.jeroendn.nl', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
         ]);
     }
 
@@ -37,7 +38,7 @@ class CreateProjectsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('projects');
     }

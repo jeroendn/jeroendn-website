@@ -47,12 +47,6 @@
                             <a class="dropdown-item" href="{{ route('tools.instagram-downloader') }}">Instagram</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Generators</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="{{ route('tools.image-generator') }}">Image</a>
-                        </div>
-                    </li>
                 </ul>
             </div>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">

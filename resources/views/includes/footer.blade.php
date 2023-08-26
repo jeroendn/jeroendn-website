@@ -15,7 +15,7 @@
                 <h5>Schoolprojecten</h5>
                 <ul>
                     @foreach($projects as $project)
-                        <li><a href="{{ $project->url }}">{{ $project->name }}</a></li>
+                        <li><a href="{{ $project->url }}" target="_blank">{{ $project->name }}</a></li>
                     @endforeach
                 </ul>
             </div>

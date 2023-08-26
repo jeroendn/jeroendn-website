@@ -29,7 +29,7 @@ class CreateProjectsTable extends Migration
             ['name' => 'Webshop', 'url' => 'https://jeroendn.nl/project/snoepwinkel/home', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
             ['name' => 'CloudStorage', 'url' => 'https://jeroendn.nl/cloudstorage/login', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
             ['name' => 'SocialMedia', 'url' => 'https://jeroendn.nl/project/socialmedia/login', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
-            ['name' => 'Nepflix (Remastered)', 'url' => 'https://dev.jeroendn.nl', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
+            ['name' => 'Nepflix (Remastered)', 'url' => 'https://nu.jeroendn.nl', 'description' => null, 'show' => true, 'created_at' => date("Y-m-d H:i:s")],
         ]);
     }
 

@@ -1,8 +1,8 @@
-## Changelog V1.2.6 ##
-Date published: 22 Dec 2022
+## Changelog V1.2.8 ##
+Date published: 16 Nov 2023
 
 ### New features & changes ###
-- Updated to Laravel 9.
+- Updated packages for security updates.
 
 ### Bug fixes ###
 - None

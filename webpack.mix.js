@@ -7,7 +7,7 @@ mix
 .sass('resources/sass/style.scss', 'public/css')
 .sass('resources/sass/tools/tools.scss', 'public/css')
 .sass('resources/sass/diary/diary.scss', 'public/css')
-.sourceMaps(false, 'source-map')
+.sourceMaps(true, 'source-map')
 .webpackConfig({
     stats: {
         // children: true // Show errors

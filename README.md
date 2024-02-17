@@ -1,8 +1,8 @@
-## Changelog V1.2.8 ##
-Date published: 16 Nov 2023
+## Changelog V1.3.0 ##
+Date published: 17 Feb 2024
 
 ### New features & changes ###
-- Updated packages for security updates.
+- Dockerized application.
 
 ### Bug fixes ###
 - None

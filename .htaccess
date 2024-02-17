@@ -1,0 +1,3 @@
+# This file is a security fallback in case this directory is accidentally served
+# DON'T SHOW DIRECTORY LISTINGS
+Options -Indexes

@@ -1,8 +1,8 @@
-## Changelog V1.3.0 ##
-Date published: 17 Feb 2024
+## Changelog V1.3.1 ##
+Date published: 25 Feb 2024
 
 ### New features & changes ###
-- Dockerized application.
+- Update Docker network name
 
 ### Bug fixes ###
 - None

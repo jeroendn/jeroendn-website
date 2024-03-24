@@ -1,16 +1,12 @@
 (defaults_jeroendn) {
-    reverse_proxy php_jeroendn:80
+    reverse_proxy php:80
 }
 
-jeroendn.nl {
+jeroendn.nl:80 jeroendn.nl:443 {
     import defaults_jeroendn
-
-    tls {
-        on_demand
-    }
 }
 
-jeroendn.local {
+jeroendn.local:80 jeroendn.local:443 {
     import defaults_jeroendn
 
     tls internal {

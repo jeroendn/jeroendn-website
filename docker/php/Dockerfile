@@ -8,7 +8,8 @@ RUN docker-php-ext-install \
 RUN apt update
 
 RUN apt install -y \
-    mc
+    mc \
+    telnet
 
 # Apache configs + document root.
 RUN echo "ServerName laravel-app.local" >> /etc/apache2/apache2.conf

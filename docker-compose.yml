@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  php_jeroendn:
+  php:
     hostname: jeroendn
     build: docker/php/.
     image: php_jeroendn:apache
@@ -11,9 +11,12 @@ services:
       - ./:/var/www/html
     networks:
       - docker_server_caddy
+      - docker_server_database
     ports:
       - "${HTTP_PORT}:9000"
 
 networks:
   docker_server_caddy:
+    external: true
+  docker_server_database:
     external: true

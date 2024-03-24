@@ -1,8 +1,8 @@
-## Changelog V1.3.1 ##
-Date published: 25 Feb 2024
+## Changelog V1.3.2 ##
+Date published: 24 Mar 2024
 
 ### New features & changes ###
-- Update Docker network name
+- Update Docker to use new database
 
 ### Bug fixes ###
 - None

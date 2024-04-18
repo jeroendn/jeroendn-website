@@ -18,6 +18,8 @@ class PublicController extends Controller
         // $this->middleware('auth');
 
         session_start();
+        $_SESSION['DB_HOST_PROJECTS'] = env('DB_HOST_PROJECTS');
+        $_SESSION['DB_USERNAME_PROJECTS'] = env('DB_USERNAME_PROJECTS');
         $_SESSION['DB_PASSWORD_PROJECTS'] = env('DB_PASSWORD_PROJECTS');
     }
 

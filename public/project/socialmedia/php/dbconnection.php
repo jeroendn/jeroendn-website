@@ -1,8 +1,8 @@
 <?php
-$servername = "web0098.zxcs.nl";
-$db_username = "u71481p69034_projects";
+$servername  = $_SESSION['DB_HOST_PROJECTS'];
+$db_username = $_SESSION['DB_USERNAME_PROJECTS'];
 $db_password = $_SESSION['DB_PASSWORD_PROJECTS'];
-$db_name = "u71481p69034_socialmedia";
+$db_name     = 'socialmedia';
 
 try {
 	$conn = new PDO("mysql:host=$servername;dbname=$db_name",$db_username,$db_password);

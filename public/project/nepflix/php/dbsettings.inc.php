@@ -1,7 +1,6 @@
 <?php
 //PDO Database instellingen MOVIES
-$servername = "web0098.zxcs.nl";
-$dBUsername = "u71481p69034_projects";
+$servername = $_SESSION['DB_HOST_PROJECTS'];
+$dBUsername = $_SESSION['DB_USERNAME_PROJECTS'];
 $dBPassword = $_SESSION['DB_PASSWORD_PROJECTS'];
-$dBName = "u71481p69034_nepflix";
-?>
+$dBName     = 'nepflix';

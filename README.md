@@ -1,8 +1,8 @@
-## Changelog V1.3.2 ##
-Date published: 24 Mar 2024
+## Changelog V1.3.3 ##
+Date published: 18 Apr 2024
 
 ### New features & changes ###
-- Update Docker to use new database
+- Update project database configuration
 
 ### Bug fixes ###
 - None

@@ -1,8 +1,8 @@
-## Changelog V1.3.3 ##
-Date published: 18 Apr 2024
+## Changelog V1.3.4 ##
+Date published: 31 Jul 2024
 
 ### New features & changes ###
-- Update project database configuration
+- Update package dependencies
 
 ### Bug fixes ###
 - None

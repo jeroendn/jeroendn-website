@@ -1,21 +1,26 @@
 #!/bin/bash
 
-NC='\033[0m'
-SUCCESS='\e[32m'
+NC="\e[0m"
+SUCCESS="\e[32m"
+WARNING="\e[33m"
+ERROR="\e[31m"
 
 GIT_BRANCH="master"
 GIT_REMOTE="origin"
 
-echo "${SUCCESS}Pulling latest changes${NC}"
+echo -e "${SUCCESS}Pulling latest changes${NC}"
 git checkout $GIT_BRANCH
 git fetch $GIT_REMOTE
 git pull $GIT_REMOTE $GIT_BRANCH
 
-echo "${SUCCESS}Restarting Docker containers${NC}"
-docker-compose down
-docker-compose up -d --build
+echo -e "${SUCCESS}Rebuilding Docker image${NC}"
+docker-compose build
 
-echo "${SUCCESS}Installing libraries${NC}"
+echo -e "${SUCCESS}Restarting Docker containers${NC}"
+docker-compose down
+docker-compose up -d
+
+echo -e "${SUCCESS}Installing libraries${NC}"
 docker exec -it php_jeroendn ./develop install
 
-echo "${SUCCESS}Deployment complete${NC}"
+echo -e "${SUCCESS}Deployment complete${NC}"

@@ -1,5 +1,10 @@
 #!/bin/bash
 
+NC="\e[0m"
+SUCCESS="\e[32m"
+WARNING="\e[33m"
+ERROR="\e[31m"
+
 if [ "$1" == "checkout" ] || [ "$1" == "c" ]; then
     ./develop install
 
@@ -14,5 +19,5 @@ elif [ "$1" == "update" ]; then
     npm update
 
 else
-    echo -e "No option specified"
+    echo -e "${WARNING}No option specified${NC}"
 fi

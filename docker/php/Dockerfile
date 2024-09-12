@@ -5,11 +5,16 @@ RUN docker-php-ext-install \
     pdo \
     pdo_mysql
 
-RUN apt update
+RUN apt-get update
 
-RUN apt install -y \
+RUN apt-get install -y \
     mc \
-    telnet
+    telnet \
+    nodejs \
+    npm
+
+RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
+RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 # Apache configs + document root.
 RUN echo "ServerName laravel-app.local" >> /etc/apache2/apache2.conf

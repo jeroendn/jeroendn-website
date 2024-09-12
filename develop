@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ "$1" == "checkout" ] || [ "$1" == "c" ]; then
+    ./develop install
+
+elif [ "$1" == "install" ]; then
+    composer install
+    npm install
+    npx mix
+    npx modclean -r -n default:safe,default:caution
+
+elif [ "$1" == "update" ]; then
+    composer update
+    npm update
+
+else
+    echo -e "No option specified"
+fi

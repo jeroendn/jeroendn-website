@@ -1,0 +1,18 @@
+#!/bin/bash
+
+GIT_BRANCH="master"
+GIT_REMOTE="origin"
+
+echo "Pulling latest changes"
+git checkout $GIT_BRANCH
+git fetch $GIT_REMOTE
+git pull $GIT_REMOTE $GIT_BRANCH
+
+echo "Restarting Docker containers"
+docker-compose down
+docker-compose up -d --build
+
+echo "Installing libraries"
+docker-compose run ./develop install
+
+echo "Deployment complete"

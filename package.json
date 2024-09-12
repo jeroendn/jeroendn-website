@@ -1,4 +1,5 @@
 {
+    "name": "jeroendn-website",
     "private": true,
     "scripts": {},
     "devDependencies": {

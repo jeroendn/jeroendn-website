@@ -5,13 +5,14 @@ RUN docker-php-ext-install \
     pdo \
     pdo_mysql
 
-RUN apt-get update
 
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     mc \
     telnet \
     nodejs \
-    npm
+    npm \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* # cleans up the cache
 
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer

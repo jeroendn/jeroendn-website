@@ -11,8 +11,8 @@ if [ "$1" == "checkout" ] || [ "$1" == "c" ]; then
 elif [ "$1" == "install" ]; then
     composer install
     npm install
-    npx mix
     npx modclean -r -n default:safe,default:caution
+    npx mix
 
 elif [ "$1" == "update" ]; then
     composer update

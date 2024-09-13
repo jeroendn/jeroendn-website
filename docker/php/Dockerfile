@@ -7,6 +7,7 @@ RUN docker-php-ext-install \
 
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    bash \
     mc \
     telnet \
     nodejs \

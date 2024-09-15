@@ -4,7 +4,7 @@
     "scripts": {},
     "devDependencies": {
         "axios": "^1.7.2",
-        "bootstrap": "^4.6.1",
+        "bootstrap": "^5.3.3",
         "cross-env": "^7.0.3",
         "jquery": "^3.6.0",
         "laravel-mix": "^6.0.49",

@@ -2,9 +2,9 @@
 
 namespace App\Providers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +24,10 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot() {
+    public function boot(): void
+    {
+        URL::forceScheme('https');
+
         // Set variables for all views after session has been started
         View::composer('*', function () {
             $isAdmin = (isset(Auth::user()->role->id) && Auth::user()->role->id === 1);

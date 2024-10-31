@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     telnet \
     nodejs \
     npm \
+    zip \
+    unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* # cleans up the cache
 

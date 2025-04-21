@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   php:
     hostname: jeroendn
@@ -7,6 +5,8 @@ services:
     image: php_jeroendn:apache
     container_name: php_jeroendn
     restart: unless-stopped
+    environment:
+      TZ: Europe/Amsterdam
     volumes:
       - ./:/var/www/html
     networks:

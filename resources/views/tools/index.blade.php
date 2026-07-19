@@ -1,7 +1,0 @@
-@extends('appTools')
-
-@section('content')
-    <div class="container">
-
-    </div>
-@endsection

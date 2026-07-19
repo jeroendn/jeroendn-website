@@ -33,9 +33,6 @@ class AppServiceProvider extends ServiceProvider
             $isAdmin = (isset(Auth::user()->role->id) && Auth::user()->role->id === 1);
             View::share('isAdmin', $isAdmin);
 
-            $isPremiumUser = (isset(Auth::user()->role->id) && Auth::user()->role->id === 2);
-            View::share('isPremiumUser', $isPremiumUser);
-
             $isUser = (isset(Auth::user()->role->id) && Auth::user()->role->id === 3);
             View::share('isUser', $isUser);
 

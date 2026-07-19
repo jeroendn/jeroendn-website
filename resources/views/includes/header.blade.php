@@ -15,9 +15,6 @@
                 <li class="menu-item"><a href="{{ route('admin') }}">Admin</a></li>
                 <li class="menu-item"><a href="{{ route('diary') }}">Diary</a></li>
             @endif
-            @if ($isAdmin || $isPremiumUser)
-                <li class="menu-item"><a href="{{ route('tools') }}">Tools</a></li>
-            @endif
         </ul>
 
         <ul>

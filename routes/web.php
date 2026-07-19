@@ -26,9 +26,5 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/home', 'AdminController@index')->name('admin.home');
 Route::get('/admin/projects', 'AdminController@projects')->name('admin.projects');
 Route::post('/admin/projects', 'AdminController@projects')->name('admin.projects');
-// Tools views
-Route::get('/tools', 'ToolsController@index')->name('tools');
-Route::get('/tools/youtube-downloader', 'ToolsController@youtubeDownloader')->name('tools.youtube-downloader');
-Route::get('/tools/instagram-downloader', 'ToolsController@instaDownloader')->name('tools.instagram-downloader');
 // Diary views
 Route::get('/diary', 'DiaryController@index')->name('diary');

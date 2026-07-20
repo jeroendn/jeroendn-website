@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 window.menuToggle = function () {
   if($('#main-menu').hasClass('menu-closed')) {
     $('#main-menu').removeClass('menu-closed');

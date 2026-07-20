@@ -1,18 +1,12 @@
-import _ from 'lodash';
-
-window._ = _;
-
 /**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
+ * We'll load jQuery and Bootstrap, which provides support for JavaScript-based
+ * Bootstrap features such as modals and tabs. This code may be
+ * modified to fit the specific needs of your application.
  */
 
-import Popper from 'popper.js';
 import $ from 'jquery';
 import 'bootstrap';
 
-window.Popper = Popper;
 window.$ = window.jQuery = $;
 
 /**

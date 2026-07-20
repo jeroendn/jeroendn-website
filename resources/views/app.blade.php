@@ -10,21 +10,17 @@
     <title>{{ ucwords(str_replace('.', ' ', getPageTitle())) . ' - ' . config('app.name') }}</title>
     <meta name="theme-color" content="#000000">
 
-    <!-- Scripts -->
-    <script src="{{ asset('/js/app.js') }}" defer></script>
-    <script src="{{ asset('/js/app.js.map') }}" defer></script>
-    <script src="{{ asset('/js/script.js') }}" defer></script>
-    <script src="{{ asset('/js/script.js.map') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/app.css.map') }}" rel="json">
-    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/style.css.map') }}" rel="json">
+    <!-- Scripts & Styles -->
+    @vite([
+        'resources/sass/app.scss',
+        'resources/sass/style.scss',
+        'resources/js/app.js',
+        'resources/js/script.js',
+    ])
 </head>
 <body>
 

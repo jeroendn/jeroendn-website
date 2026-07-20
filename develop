@@ -13,7 +13,7 @@ elif [ "$1" == "install" ]; then
     composer install
     npm install
     npx modclean -r -n default:safe,default:caution
-    npx mix
+    npm run build
 
     echo -e "${SUCCESS}Installation finished${NC}"
 elif [ "$1" == "update" ]; then

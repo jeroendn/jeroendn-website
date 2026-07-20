@@ -13,7 +13,6 @@
             <li class="menu-item"><a href="{{ route('contact') }}">Contact</a></li>
             @if ($isAdmin)
                 <li class="menu-item"><a href="{{ route('admin') }}">Admin</a></li>
-                <li class="menu-item"><a href="{{ route('diary') }}">Diary</a></li>
             @endif
         </ul>
 

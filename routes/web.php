@@ -26,5 +26,3 @@ Route::get('/admin', 'AdminController@index')->name('admin');
 Route::get('/admin/home', 'AdminController@index')->name('admin.home');
 Route::get('/admin/projects', 'AdminController@projects')->name('admin.projects');
 Route::post('/admin/projects', 'AdminController@projects')->name('admin.projects');
-// Diary views
-Route::get('/diary', 'DiaryController@index')->name('diary');

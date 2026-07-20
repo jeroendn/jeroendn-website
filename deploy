@@ -28,7 +28,7 @@ git fetch $GIT_REMOTE
 git pull $GIT_REMOTE $GIT_BRANCH
 
 echo -e "${SUCCESS}Rebuilding Docker image${NC}"
-sudo docker compose build
+sudo docker compose build --no-cache --pull
 
 echo -e "${SUCCESS}Restarting Docker containers${NC}"
 sudo docker compose down

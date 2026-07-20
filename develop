@@ -7,13 +7,14 @@ ERROR="\e[41m"
 
 if [ "$1" == "checkout" ] || [ "$1" == "c" ]; then
     ./develop install
+    php artisan migrate
+    npm run build
 
     echo -e "${SUCCESS}Checkout finished${NC}"
 elif [ "$1" == "install" ]; then
     composer install
     npm install
     npx modclean -r -n default:safe,default:caution
-    npm run build
 
     echo -e "${SUCCESS}Installation finished${NC}"
 elif [ "$1" == "update" ]; then

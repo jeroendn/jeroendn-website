@@ -1,27 +1,120 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-NC="\e[0m"
-SUCCESS="\e[42m"
-WARNING="\e[43m"
-ERROR="\e[41m"
+set -uo pipefail
 
-if [ "$1" == "checkout" ] || [ "$1" == "c" ]; then
-    ./develop install
-    php artisan migrate
-    npm run build
+CONTAINER="${JEROENDN_WEBSITE_CONTAINER:-php_jeroendn}"
 
-    echo -e "${SUCCESS}Checkout finished${NC}"
-elif [ "$1" == "install" ]; then
-    composer install
-    npm install
-    npx modclean -r -n default:safe,default:caution
+# Detect Git Bash on Windows: there `uname -s` prints "MINGW64_NT-..." or
+# "MSYS_NT-...". Git Bash needs two workarounds that must NOT apply on
+# macOS/Linux/WSL:
+#
+#   1. Git Bash rewrites arguments that look like Unix paths into Windows paths
+#      before the command ever sees them (e.g. `/var/www` becomes
+#      `C:/Program Files/Git/var/www`), which mangles paths meant for inside
+#      the container. MSYS_NO_PATHCONV=1 disables that rewriting.
+#
+#   2. Git Bash's terminal is not a real Windows console, so allocating a TTY
+#      with `docker exec -t` fails there ("the input device is not a TTY").
+#      run() checks IS_MSYS and leaves out the -t flag in that case.
+IS_MSYS=false
+case "$(uname -s 2>/dev/null)" in
+    MINGW* | MSYS*)
+        IS_MSYS=true
+        export MSYS_NO_PATHCONV=1
+        ;;
+esac
 
-    echo -e "${SUCCESS}Installation finished${NC}"
-elif [ "$1" == "update" ]; then
-    composer update
-    npm update
+ok()  { printf '\033[30;42m %s \033[0m\n' "$1"; }
+err() { printf '\033[97;41m %s \033[0m\n' "$1" >&2; }
 
-    echo -e "${SUCCESS}Update finished${NC}"
-else
-    echo -e "${WARNING}No option specified${NC}"
-fi
+# Are we running inside the Docker container?
+in_container() { [ -f /.dockerenv ]; }
+
+ensure_container_running() {
+    if ! docker ps --format '{{.Names}}' | grep -qx "$CONTAINER"; then
+        err "Container '$CONTAINER' is not running. Start it with: ./develop up -d --build"
+        exit 1
+    fi
+}
+
+run() {
+    if in_container; then
+        "$@"
+    else
+        ensure_container_running
+        if [ -t 1 ] && [ "$IS_MSYS" = false ]; then
+            docker exec -it "$CONTAINER" "$@"
+        else
+            docker exec "$CONTAINER" "$@"
+        fi
+    fi
+}
+
+usage() {
+    cat <<'EOF'
+Usage: ./develop <command>
+
+Dev commands (executed inside the php_jeroendn container):
+  checkout, c                  install + database migrate + asset build
+  install                      composer install + npm install
+  update                       composer update + npm update
+  code-quality-assurance, cqa  quality gate: phpunit
+  composer ...                 run any composer command in the container
+  npm|npx ...                  run any npm/npx command in the container
+  artisan ...                  run any artisan command in the container
+
+Anything else is passed straight through to `docker compose`, e.g.:
+  ./develop up -d --build
+  ./develop down
+  ./develop logs -f
+  ./develop ps
+EOF
+}
+
+case "${1:-}" in
+    ""|help|-h|--help)
+        usage
+        ;;
+    checkout|c)
+        run ./develop install
+        run php artisan migrate
+        run npm run build
+        ok "Checkout finished"
+        ;;
+    install)
+        run composer install
+        run npm install
+        run npx modclean -r -n default:safe,default:caution
+        ok "Installation finished"
+        ;;
+    update)
+        run composer update
+        run npm update
+        ok "Update finished"
+        ;;
+    code-quality-assurance|cqa)
+        # TODO: replace with `run vendor/bin/code-quality-assurance.sh` once
+        # jeroendn/php-helpers is bumped past 0.7-beta. The script ships in
+        # 1.0.0, but that release requires php ^8.5.
+        run vendor/bin/phpunit
+        ok "Code quality assurance completed"
+        ;;
+    composer)
+        run "$@"
+        ;;
+    npm|npx)
+        run "$@"
+        ;;
+    artisan)
+        shift
+        run php artisan "$@"
+        ;;
+    *)
+        # Default: proxy to docker compose (host only).
+        if in_container; then
+            err "'docker compose' is not available inside the container."
+            exit 1
+        fi
+        exec docker compose "$@"
+        ;;
+esac

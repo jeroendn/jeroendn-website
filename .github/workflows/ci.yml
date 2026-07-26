@@ -46,9 +46,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # rector-check and cs-check join this list once those tools are added
-        # to the project.
-        script: [phpstan, phpunit]
+        # rector-check joins this list once rector is added to the project.
+        script: [cs-check, phpstan, phpunit]
     # CI has no .env: feature tests boot the web middleware (EncryptCookies),
     # which needs a non-null APP_KEY. The key is a CI-only dummy, not a secret.
     env:

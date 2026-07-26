@@ -12,6 +12,7 @@ parameters:
         - database
         - routes
         - tests
+        - .php-cs-fixer.dist.php
         - artisan
         - bootstrap/app.php # Not the whole dir: bootstrap/cache holds generated files
         - public/index.php

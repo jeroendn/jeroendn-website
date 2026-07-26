@@ -21,6 +21,7 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.5",
         "phpunit/phpunit": "^10.0",
+        "rector/rector": "^2.5",
         "spatie/laravel-ignition": "^2.9",
         "tomasvotruba/bladestan": "^0.11.7"
     },
@@ -72,6 +73,8 @@
         "phpstan": "phpstan analyse --memory-limit=2G",
         "phpstan-baseline": "phpstan analyse --generate-baseline --memory-limit=2G",
         "phpunit": "phpunit",
+        "rector-check": "rector --dry-run",
+        "rector-fix": "rector",
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"

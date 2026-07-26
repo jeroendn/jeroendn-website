@@ -18,7 +18,7 @@ class Project extends Model
     public static function visibleToCurrentUser(): Collection
     {
         return self::query()
-            ->when(!isAdmin(), fn ($query) => $query->where('show', true))
+            ->when(!isAdmin(), fn($query) => $query->where('show', true))
             ->orderByDesc('id')
             ->get();
     }

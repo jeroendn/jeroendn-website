@@ -27,7 +27,7 @@ class CreateUsersTable extends Migration
 
         DB::table('users')->insert([
             ['name' => 'Jeroen de Nijs', 'email' => 'info@jeroendn.nl', 'password' => '$2y$10$rW4MIj3.akanz1..0drchepUiamXXDxmJewAUJdSiK4/OGSTSdjyC', 'role_id' => '1'],
-            ['name' => 'Premium User', 'email' => 'premium@jeroendn.nl', 'password' => '$2y$10$Z7J7gTJfdQs4mL6sfwNpoeTgeKjMUd./6OKCiXsgqozizUExw3Cba', 'role_id' => '2']
+            ['name' => 'Premium User', 'email' => 'premium@jeroendn.nl', 'password' => '$2y$10$Z7J7gTJfdQs4mL6sfwNpoeTgeKjMUd./6OKCiXsgqozizUExw3Cba', 'role_id' => '2'],
         ]);
     }
 

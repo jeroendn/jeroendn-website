@@ -31,45 +31,9 @@ parameters:
 			path: app/Exceptions/Handler.php
 
 		-
-			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
-			identifier: foreach.nonIterable
-			count: 3
-			path: app/Http/Controllers/AdminController.php
-
-		-
 			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 2
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Cannot access property \$id on mixed\.$#'
-			identifier: property.nonObject
-			count: 3
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Cannot access property \$name on mixed\.$#'
-			identifier: property.nonObject
-			count: 3
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Cannot access property \$show on mixed\.$#'
-			identifier: property.nonObject
-			count: 1
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Cannot access property \$url on mixed\.$#'
-			identifier: property.nonObject
-			count: 2
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Parameter \#1 \$data of method Illuminate\\View\\Factory\:\:addLoop\(\) expects array\|Countable, mixed given\.$#'
-			identifier: argument.type
-			count: 3
 			path: app/Http/Controllers/AdminController.php
 
 		-
@@ -81,31 +45,13 @@ parameters:
 		-
 			message: '#^Parameter \#1 \$value of function e expects BackedEnum\|float\|Illuminate\\Contracts\\Support\\DeferringDisplayableValue\|Illuminate\\Contracts\\Support\\Htmlable\|int\|string\|null, mixed given\.$#'
 			identifier: argument.type
-			count: 10
+			count: 2
 			path: app/Http/Controllers/AdminController.php
 
 		-
 			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, mixed given\.$#'
 			identifier: argument.type
 			count: 2
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Undefined variable\: \$isAdmin$#'
-			identifier: variable.undefined
-			count: 4
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Undefined variable\: \$projects$#'
-			identifier: variable.undefined
-			count: 2
-			path: app/Http/Controllers/AdminController.php
-
-		-
-			message: '#^Variable \$projects might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
 			path: app/Http/Controllers/AdminController.php
 
 		-
@@ -127,12 +73,6 @@ parameters:
 			path: app/Http/Controllers/Auth/RegisterController.php
 
 		-
-			message: '#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\.$#'
-			identifier: foreach.nonIterable
-			count: 4
-			path: app/Http/Controllers/PublicController.php
-
-		-
 			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 3
@@ -145,51 +85,15 @@ parameters:
 			path: app/Http/Controllers/PublicController.php
 
 		-
-			message: '#^Cannot access property \$name on mixed\.$#'
-			identifier: property.nonObject
-			count: 4
-			path: app/Http/Controllers/PublicController.php
-
-		-
-			message: '#^Cannot access property \$url on mixed\.$#'
-			identifier: property.nonObject
-			count: 4
-			path: app/Http/Controllers/PublicController.php
-
-		-
-			message: '#^Parameter \#1 \$data of method Illuminate\\View\\Factory\:\:addLoop\(\) expects array\|Countable, mixed given\.$#'
-			identifier: argument.type
-			count: 4
-			path: app/Http/Controllers/PublicController.php
-
-		-
 			message: '#^Parameter \#1 \$value of function e expects BackedEnum\|float\|Illuminate\\Contracts\\Support\\DeferringDisplayableValue\|Illuminate\\Contracts\\Support\\Htmlable\|int\|string\|null, mixed given\.$#'
 			identifier: argument.type
-			count: 11
+			count: 3
 			path: app/Http/Controllers/PublicController.php
 
 		-
 			message: '#^Parameter \#2 \$timestamp of function date expects int\|null, mixed given\.$#'
 			identifier: argument.type
 			count: 3
-			path: app/Http/Controllers/PublicController.php
-
-		-
-			message: '#^Undefined variable\: \$isAdmin$#'
-			identifier: variable.undefined
-			count: 6
-			path: app/Http/Controllers/PublicController.php
-
-		-
-			message: '#^Undefined variable\: \$projects$#'
-			identifier: variable.undefined
-			count: 3
-			path: app/Http/Controllers/PublicController.php
-
-		-
-			message: '#^Variable \$projects might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
 			path: app/Http/Controllers/PublicController.php
 
 		-
@@ -259,7 +163,7 @@ parameters:
 			path: app/Http/Middleware/EncryptCookies.php
 
 		-
-			message: '#^Cannot access property \$id on mixed\.$#'
+			message: '#^Cannot access property \$id on App\\UserRole\|null\.$#'
 			identifier: property.nonObject
 			count: 1
 			path: app/Http/Middleware/RoleMiddleware.php
@@ -337,18 +241,6 @@ parameters:
 			path: app/Project.php
 
 		-
-			message: '#^Called ''where'' on Laravel collection, but could have been retrieved as a query\.$#'
-			identifier: larastan.noUnnecessaryCollectionCall
-			count: 1
-			path: app/Providers/AppServiceProvider.php
-
-		-
-			message: '#^Cannot access property \$id on mixed\.$#'
-			identifier: property.nonObject
-			count: 2
-			path: app/Providers/AppServiceProvider.php
-
-		-
 			message: '#^PHPDoc type array of property App\\Providers\\AuthServiceProvider\:\:\$policies is not covariant with PHPDoc type array\<class\-string, class\-string\> of overridden property Illuminate\\Foundation\\Support\\Providers\\AuthServiceProvider\:\:\$policies\.$#'
 			identifier: property.phpDocType
 			count: 1
@@ -371,12 +263,6 @@ parameters:
 			identifier: missingType.iterableValue
 			count: 1
 			path: app/Providers/EventServiceProvider.php
-
-		-
-			message: '#^Method App\\User\:\:role\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: app/User.php
 
 		-
 			message: '#^PHPDoc type array of property App\\User\:\:\$casts is not covariant with PHPDoc type array\<string, string\> of overridden property Illuminate\\Database\\Eloquent\\Model\:\:\$casts\.$#'

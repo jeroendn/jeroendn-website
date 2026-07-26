@@ -11,7 +11,7 @@
             <li class="menu-item"><a href="{{ route('home') }}">Home</a></li>
             <li class="menu-item"><a href="{{ route('projects') }}">Projects</a></li>
             <li class="menu-item"><a href="{{ route('contact') }}">Contact</a></li>
-            @if ($isAdmin)
+            @if (isAdmin())
                 <li class="menu-item"><a href="{{ route('admin') }}">Admin</a></li>
             @endif
         </ul>

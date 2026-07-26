@@ -45,6 +45,8 @@ class AdminController extends Controller
             }
         }
 
-        return view('admin.projects');
+        return view('admin.projects', [
+            'projects' => Project::visibleToCurrentUser(),
+        ]);
     }
 }

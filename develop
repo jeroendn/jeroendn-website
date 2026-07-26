@@ -56,7 +56,7 @@ Usage: ./develop <command>
 
 Dev commands (executed inside the php_jeroendn container):
   checkout, c                  composer/npm install + database migrate + asset build
-  code-quality-assurance, cqa  quality gate: phpunit
+  code-quality-assurance, cqa  quality gate: phpunit + asset build
   composer ...                 run any composer command in the container
   npm|npx ...                  run any npm/npx command in the container
   artisan ...                  run any artisan command in the container
@@ -89,7 +89,8 @@ case "${1:-}" in
         # TODO: replace with `run vendor/bin/code-quality-assurance.sh` once
         # jeroendn/php-helpers is bumped past 0.7-beta. The script ships in
         # 1.0.0, but that release requires php ^8.5.
-        if run vendor/bin/phpunit; then
+        if run composer phpunit \
+            && run npm run build; then
             ok "Code quality assurance completed"
         else
             err "Code quality assurance failed"

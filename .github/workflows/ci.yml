@@ -40,6 +40,9 @@ jobs:
       - name: Composer validate
         run: composer validate --strict
 
+      - name: Composer normalize
+        run: composer normalize --dry-run
+
   check:
     needs: setup
     runs-on: ubuntu-latest

@@ -14,7 +14,7 @@
             <div class="col-md mb-3">
                 <h5>Schoolprojecten</h5>
                 <ul>
-                    @foreach($projects as $project)
+                    @foreach(\App\Project::visibleToCurrentUser() as $project)
                         <li><a href="{{ $project->url }}" target="_blank">{{ $project->name }}</a></li>
                     @endforeach
                 </ul>

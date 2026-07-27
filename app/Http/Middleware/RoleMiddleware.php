@@ -18,7 +18,7 @@ class RoleMiddleware
      */
     public function handle($request, Closure $next, $roles)
     {
-        $roles = explode('|',$roles);
+        $roles = explode('|', $roles);
         foreach ($roles as $role) {
             if (Auth::user()->role->id === intval($role)) {
                 return $next($request);

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
 
 class PublicController extends Controller
 {
@@ -36,7 +36,9 @@ class PublicController extends Controller
      */
     public function projects()
     {
-        return view('public.projects');
+        return view('public.projects', [
+            'projects' => Project::visibleToCurrentUser(),
+        ]);
     }
 
     /**

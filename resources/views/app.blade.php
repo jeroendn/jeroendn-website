@@ -25,7 +25,7 @@
 </head>
 <body>
 
-@if($isAdmin)
+@if(isAdmin())
     @include('includes.adminBar')
 @endif
 

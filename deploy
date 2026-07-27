@@ -22,7 +22,7 @@ echo -e "${SUCCESS}Please enter your sudo password:${NC}"
 sudo -v
 
 echo -e "${SUCCESS}Enabling maintenance mode${NC}"
-sudo docker exec -it $CONTAINER_NAME php artisan down \
+sudo docker exec -it $CONTAINER_NAME php artisan down --render="errors::503" --retry=180 \
   || echo -e "${WARNING}Could not enable maintenance mode (container not running?)${NC}"
 
 echo -e "${SUCCESS}Pulling latest changes${NC}"

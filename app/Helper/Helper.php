@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /**
  * Define globally accessible functions inside Helpers.php
  */
@@ -10,7 +12,7 @@
 function getPageTitle(): string
 {
     $title = request()->segment(count(request()->segments()));
-    return ($title !== null) ? $title : 'home';
+    return $title ?? 'home';
 }
 
 /**
@@ -19,5 +21,5 @@ function getPageTitle(): string
 function isAdmin(): bool
 {
     $user = auth()->user();
-    return $user instanceof \App\User && $user->role?->id === 1;
+    return $user instanceof User && $user->role?->id === 1;
 }

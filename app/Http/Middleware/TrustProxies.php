@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Override;
 use Illuminate\Http\Middleware\TrustProxies as Middleware;
 use Illuminate\Http\Request;
 
@@ -12,6 +13,7 @@ class TrustProxies extends Middleware
      *
      * @var array|string|null
      */
+    #[Override]
     protected $proxies;
 
     /**
@@ -19,5 +21,6 @@ class TrustProxies extends Middleware
      *
      * @var int
      */
+    #[Override]
     protected $headers = Request::HEADER_X_FORWARDED_FOR;
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Override;
 use Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode as Middleware;
 
 class CheckForMaintenanceMode extends Middleware
@@ -11,6 +12,7 @@ class CheckForMaintenanceMode extends Middleware
      *
      * @var array
      */
+    #[Override]
     protected $except = [
         //
     ];

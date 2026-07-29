@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use Override;
 use Illuminate\Foundation\Http\Middleware\TrimStrings as Middleware;
 
 class TrimStrings extends Middleware
@@ -11,6 +12,7 @@ class TrimStrings extends Middleware
      *
      * @var array
      */
+    #[Override]
     protected $except = [
         'password',
         'password_confirmation',

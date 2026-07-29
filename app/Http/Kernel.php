@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use Override;
 use App\Http\Middleware\TrustProxies;
 use Illuminate\Http\Middleware\HandleCors;
 use App\Http\Middleware\CheckForMaintenanceMode;
@@ -35,6 +36,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+    #[Override]
     protected $middleware = [
         // \App\Http\Middleware\TrustHosts::class,
         TrustProxies::class,
@@ -50,6 +52,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+    #[Override]
     protected $middlewareGroups = [
         'web' => [
             EncryptCookies::class,
@@ -74,6 +77,7 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
+    #[Override]
     protected $routeMiddleware = [
         'auth' => Authenticate::class,
         'auth.basic' => AuthenticateWithBasicAuth::class,

@@ -13,6 +13,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
+    #[Override]
     protected $commands = [
         //
     ];

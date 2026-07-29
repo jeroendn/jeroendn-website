@@ -14,6 +14,7 @@ class EventServiceProvider extends ServiceProvider
      *
      * @var array
      */
+    #[Override]
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,

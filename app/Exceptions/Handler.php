@@ -16,6 +16,7 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
+    #[Override]
     protected $dontReport = [
         //
     ];
@@ -25,6 +26,7 @@ class Handler extends ExceptionHandler
      *
      * @var array
      */
+    #[Override]
     protected $dontFlash = [
         'password',
         'password_confirmation',

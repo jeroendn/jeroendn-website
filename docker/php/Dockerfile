@@ -29,3 +29,13 @@ RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf
 
 # Enable apache
 RUN a2enmod rewrite headers
+
+# The legacy standalone projects (public/project/*) read their database
+# credentials from the native PHP session; prepend a script that seeds those
+# values from .env for every PHP request under that directory.
+RUN { \
+        echo '<Directory ${APACHE_DOCUMENT_ROOT}/project>'; \
+        echo '    php_admin_value auto_prepend_file /var/www/html/bootstrap/legacy-projects-session.php'; \
+        echo '</Directory>'; \
+    } > /etc/apache2/conf-available/legacy-projects.conf \
+    && a2enconf legacy-projects

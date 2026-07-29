@@ -16,5 +16,6 @@ parameters:
         - rector.php
         - artisan
         - bootstrap/app.php # Not the whole dir: bootstrap/cache holds generated files
+        - bootstrap/legacy-projects-session.php
         - public/index.php
         - server.php

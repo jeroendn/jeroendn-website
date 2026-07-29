@@ -7,7 +7,7 @@ which projects are visible.
 
 ## Tech stack
 
-- [Laravel 11](https://laravel.com) on PHP 8.3, MySQL
+- [Laravel 13](https://laravel.com) on PHP 8.5, MySQL
 - [Bootstrap 5](https://getbootstrap.com) + Sass + jQuery, bundled with [Vite 8](https://vite.dev)
 - Runs in Docker; only Docker is needed on the host
 

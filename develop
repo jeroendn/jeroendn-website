@@ -86,16 +86,7 @@ case "${1:-}" in
         fi
         ;;
     code-quality-assurance|cqa)
-        # TODO: replace with `run vendor/bin/code-quality-assurance.sh` once
-        # jeroendn/php-helpers is bumped past 0.7-beta. The script ships in
-        # 1.0.0, but that release requires php ^8.5.
-        if run composer normalize \
-            && run composer validate --strict \
-            && run composer rector-fix \
-            && run composer cs-fix \
-            && run composer phpstan \
-            && run composer phpunit \
-            && run npm run build; then
+        if run vendor/bin/code-quality-assurance.sh; then
             ok "Code quality assurance completed"
         else
             err "Code quality assurance failed"

@@ -5,16 +5,14 @@ declare(strict_types=1);
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
-// (new ...) wrapping instead of SSD's `new Config()->` chaining: that syntax
-// needs PHP 8.4+, this container runs 8.3.
-return (new Config())
+return new Config()
     ->setRiskyAllowed(false)
     ->setCacheFile(__DIR__ . '/tmp/cs-fixer')
     ->setRules([
         '@auto' => true, // @PER-CS + PHP migration level from composer.json
     ])
     ->setFinder(
-        (new Finder())
+        new Finder()
             ->in(__DIR__ . '/app')
             ->in(__DIR__ . '/config')
             ->in(__DIR__ . '/database')

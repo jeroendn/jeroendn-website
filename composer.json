@@ -4,14 +4,14 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^8.3",
+        "php": "^8.5",
         "ext-curl": "^8.0",
         "ext-pdo": "*",
         "guzzlehttp/guzzle": "^7.9",
-        "jeroendn/php-helpers": "0.7-beta",
+        "jeroendn/php-helpers": "^1.0",
         "jeroendn/php-js-console-logger": "^1.0",
-        "laravel/framework": "^11.0",
-        "laravel/tinker": "^2.10",
+        "laravel/framework": "^13.0",
+        "laravel/tinker": "^3.0",
         "laravel/ui": "^4.6"
     },
     "require-dev": {
@@ -21,7 +21,7 @@
         "larastan/larastan": "^3.10",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.5",
-        "phpunit/phpunit": "^10.0",
+        "phpunit/phpunit": "^13.0",
         "rector/rector": "^2.5",
         "spatie/laravel-ignition": "^2.9",
         "tomasvotruba/bladestan": "^0.11.7"
@@ -50,19 +50,6 @@
             "ergebnis/composer-normalize": true
         },
         "optimize-autoloader": true,
-        "policy": {
-            "advisories": {
-                "ignore-id": {
-                    "PKSA-3r5d-mb8f-1qw9": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-8qx3-n5y5-vvnd": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-m5cs-t1y6-qpcs": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-mdq4-51ck-6kdq": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-q46n-4fdk-zjr4": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-qzrn-rnz3-85w1": "Laravel 11 is EOL; upgrade to Laravel 12 pending",
-                    "PKSA-w7xr-vk7n-rstm": "Laravel 11 is EOL; upgrade to Laravel 12 pending"
-                }
-            }
-        },
         "preferred-install": "dist",
         "sort-packages": true
     },

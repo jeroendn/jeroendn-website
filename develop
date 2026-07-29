@@ -87,8 +87,10 @@ case "${1:-}" in
         ;;
     code-quality-assurance|cqa)
         # TODO: replace with `run vendor/bin/code-quality-assurance.sh` once
-        # jeroendn/php-helpers is bumped past 0.7-beta. The script ships in
-        # 1.0.0, but that release requires php ^8.5.
+        # jeroendn/php-helpers is bumped to 1.0.0+, which ships the script.
+        # 1.0.x requires symfony/var-dumper ^8.0 while Laravel 11 pins ^7 —
+        # unblock by relaxing var-dumper to `^7.0 || ^8.0` in PhpHelpers and
+        # tagging a release, or by moving to a framework version on Symfony 8.
         if run composer normalize \
             && run composer validate --strict \
             && run composer rector-fix \

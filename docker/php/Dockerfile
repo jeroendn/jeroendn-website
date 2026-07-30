@@ -1,24 +1,27 @@
 FROM php:8.5-apache
 
-RUN docker-php-ext-install \
-    mysqli \
-    pdo \
-    pdo_mysql
-
-
 RUN apt-get update && apt-get install -y --no-install-recommends \
     bash \
     mc \
     telnet \
-    nodejs \
-    npm \
     zip \
     unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* # cleans up the cache
 
-RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
-RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+RUN docker-php-ext-install -j"$(nproc)" \
+    mysqli \
+    pdo \
+    pdo_mysql
+
+# Node + npm copied from the official image instead of Debian's nodejs/npm packages
+COPY --from=node:22-bookworm-slim /usr/local/bin/node /usr/local/bin/node
+COPY --from=node:22-bookworm-slim /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN ln -s /usr/local/lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm \
+    && ln -s /usr/local/lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
+
+RUN curl -sS https://getcomposer.org/installer \
+    | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Apache configs + document root.
 RUN echo "ServerName laravel-app.local" >> /etc/apache2/apache2.conf

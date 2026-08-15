@@ -1,5 +1,5 @@
 (defaults_jeroendn) {
-    reverse_proxy php:80
+    reverse_proxy php_jeroendn:80
 }
 
 jeroendn.nl:80 jeroendn.nl:443 {

@@ -71,8 +71,8 @@
         ],
         "cs-check": "php-cs-fixer check",
         "cs-fix": "php-cs-fixer fix",
-        "phpstan": "phpstan analyse --memory-limit=2G",
-        "phpstan-baseline": "phpstan analyse --generate-baseline --memory-limit=2G",
+        "phpstan": "phpstan analyse --memory-limit=2G -a vendor/larastan/larastan/bootstrap.php",
+        "phpstan-baseline": "phpstan analyse --generate-baseline --memory-limit=2G -a vendor/larastan/larastan/bootstrap.php",
         "phpunit": "phpunit",
         "rector-check": "rector --dry-run",
         "rector-fix": "rector"

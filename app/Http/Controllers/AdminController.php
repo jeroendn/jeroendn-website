@@ -37,7 +37,7 @@ class AdminController extends Controller
             $projects = Project::all()->sortByDesc('id');
 
             foreach ($projects as $project) {
-                $show = !empty($request->input($project->id)); // Set true or false
+                $show = !empty($request->input((string) $project->id)); // Set true or false
                 if ($project->show != $show) {
                     $project->show = $show;
                     $project->save();
